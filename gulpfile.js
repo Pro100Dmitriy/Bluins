@@ -6,6 +6,7 @@ var gulp         = require('gulp'),
     concat       = require('gulp-concat'),
     uglify       = require('gulp-uglifyjs');
 
+sass.compiler = require('node-sass');
 
 gulp.task('sass', function(){
     return gulp.src('app/sass/**/*.sass')
