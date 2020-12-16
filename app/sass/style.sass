@@ -2,7 +2,50 @@
 @import 'fonts';
 @import 'libs';
 
-h1
-    font-family: 'PlayfairDisplay'
-    font-weight: 400
-    font-size: 80px
+html
+    font-size: 15px
+
+body
+    background: #000
+
+@import 'font_style';
+@import 'reset_css';
+
+.big-container
+    max-width: 1750px
+    margin: 0 auto
+
+
+.header
+    color: white
+    &_top
+        width: 100%
+        background-color: $dark
+        &_content
+            display: flex
+            justify-content: space-between
+            &_left
+                display: flex
+                flex-direction: row
+                .social
+                    display: flex
+                    flex-direction: row
+                .links
+                    display: flex
+                    flex-direction: row    
+            &_right
+                display: flex
+                flex-direction: row
+                div
+                    display: flex
+                    flex-direction: row
+    &_bottom
+        &_content
+            display: flex
+            justify-content: space-between
+            position: relative
+            &_center
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
