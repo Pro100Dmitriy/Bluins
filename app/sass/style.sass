@@ -6,7 +6,7 @@ html
     font-size: 15px
 
 body
-    background: #000
+    background: grey
 
 @import 'font_style';
 @import 'reset_css';
@@ -17,35 +17,81 @@ body
 
 
 .header
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    z-index: $header-z-index
     color: white
     &_top
         width: 100%
         background-color: $dark
+        padding: 0.2rem 1rem
         &_content
             display: flex
             justify-content: space-between
             &_left
                 display: flex
                 flex-direction: row
+                align-items: center
                 .social
                     display: flex
                     flex-direction: row
+                    margin-right: 1.3rem
+                    li
+                        margin-right: 0.5rem
+                        &:last-child
+                            margin-right: 0rem
                 .links
                     display: flex
-                    flex-direction: row    
+                    flex-direction: row
+                    li
+                        margin-right: 2.4rem
+                        a
+                            color: $white
+                            &:hover
+                                text-decoration: none
             &_right
                 display: flex
                 flex-direction: row
                 div
                     display: flex
                     flex-direction: row
+                    align-items: center
+                    img
+                        margin-right: 0.8rem
+                .phone
+                    margin-right: 6.3rem
     &_bottom
+        padding: 1.6rem 1rem
         &_content
             display: flex
             justify-content: space-between
             position: relative
+            menu
+                display: flex
+                flex-direction: row
+                align-items: center
+                a
+                    color: $white
+                    &:hover
+                        text-decoration: none
+            &_left
+                .main-links
+                    li
+                        margin-right: 3rem
             &_center
                 position: absolute
                 top: 50%
                 left: 50%
                 transform: translate(-50%,-50%)
+            &_right
+                .user-links
+                    li 
+                        margin-left: 1.3rem
+
+
+
+
+.slider
+    padding-top: 10rem
