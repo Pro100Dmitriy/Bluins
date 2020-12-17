@@ -12,22 +12,26 @@
 
     <header class="header">
     <!-- Header -->
-        <div class="header_top">
+        <div class="header__top">
             <div class="big-container">
-                <div class="header_top_content">
-                    <div class="header_top_content_left">
-                        <menu class="social">
-                            <li><a href="#"><img src="img/Icon/Small/Vk.svg" width="33px" height="33px" alt="Меню"></a></li>
-                            <li><a href="#"><img src="img/Icon/Small/Facebook.svg" width="33px" height="33px" alt="Меню"></a></li>
-                            <li><a href="#"><img src="img/Icon/Small/Instagram.svg" width="33px" height="33px" alt="Меню"></a></li>
-                        </menu>                
-                        <menu class="links">
-                            <li><a class="light-thirteen" href="#">Оплата и доставка</a></li>
-                            <li><a class="light-thirteen" href="#">Как купить?</a></li>
-                            <li><a class="light-thirteen" href="#">Поддержка</a></li>
-                        </menu>                
+                <div class="header__top__content">
+                    <div class="header__top__content__left">
+                        <nav class="social-menu">
+                            <ul class="social-menu__links">
+                                <li><a href="#"><img src="img/Icon/Small/Vk.svg" width="33px" height="33px" alt="Меню"></a></li>
+                                <li><a href="#"><img src="img/Icon/Small/Facebook.svg" width="33px" height="33px" alt="Меню"></a></li>
+                                <li><a href="#"><img src="img/Icon/Small/Instagram.svg" width="33px" height="33px" alt="Меню"></a></li>
+                            </ul>   
+                        </nav>    
+                        <nav class="site-menu">       
+                            <ul class="site-menu__links">
+                                <li><a class="light-thirteen" href="#">Оплата и доставка</a></li>
+                                <li><a class="light-thirteen" href="#">Как купить?</a></li>
+                                <li><a class="light-thirteen" href="#">Поддержка</a></li>
+                            </ul>
+                        </nav>                  
                     </div>
-                    <div class="header_top_content_right">
+                    <div class="header__top__content__right">
                         <div class="phone">
                             <img src="img/Icon/Small/Phone.svg" width="33px" height="33px" alt="Меню">
                             <p class="light-thirteen">+375 99 999 99 98</p>
@@ -41,28 +45,74 @@
             </div>
         </div>
 
-        <div class="header_bottom">
+        <div class="header__bottom">
             <div class="big-container">
-                <div class="header_bottom_content">
-                    <div class="header_bottom_content_left">
-                        <menu class="main-links">
-                            <li><div class="burger"><img src="img/Icon/Menu.svg" width="45px" height="45px" alt="Меню"></div></li>
-                            <li><a href="#">Главная</a></li>
-                            <li><a href="#">Товары</a></li>
-                            <li><a href="#">Контакты</a></li>
-                            <li><a href="#">О нас</a></li>
-                        </menu>
+                <div class="header__bottom__content">
+                    <div class="header__bottom__content__left">
+                        <div class="burger">
+                            <button class="burger__button">
+                                <img src="img/Icon/Menu.svg" width="45px" height="45px" alt="Меню">
+                            </button>
+                        </div>
+                        <nav class="main-menu"> 
+                            <ul class="main-menu__links">
+                                <li class="main-menu__item"><a class="regular-seventeen" href="#">Главная</a></li>
+                                <li class="main-menu__item">
+                                    <a class="regular-seventeen" href="#">Товары</a>
+                                    <ul class="sub-nav">
+                                        <li class="sub-nav__item">
+                                            <a class="medium-ninteen" href="#">Категории</a>
+                                            <ul class="sub-nav__item__pages">
+                                                <li><a class="light-seventeen" href="#">Пледы</a></li>
+                                                <li><a class="light-seventeen" href="#">Одеяла</a></li>
+                                                <li><a class="light-seventeen" href="#">Подушки</a></li>
+                                                <li><a class="light-seventeen" href="#">Покрывала</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub-nav__item">
+                                            <a class="medium-ninteen" href="#">Материалы</a>
+                                            <ul class="sub-nav__item__pages">
+                                                <li><a class="light-seventeen" href="#">Лён</a></li>
+                                                <li><a class="light-seventeen" href="#">Синтетика</a></li>
+                                                <li><a class="light-seventeen" href="#">Ткань</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub-nav__item">
+                                            <a class="medium-ninteen" href="#">Пледы</a>
+                                            <ul class="sub-nav__item__pages">
+                                                <li><a class="light-seventeen" href="#">Пледы</a></li>
+                                                <li><a class="light-seventeen" href="#">Одеяла</a></li>
+                                                <li><a class="light-seventeen" href="#">Подушки</a></li>
+                                                <li><a class="light-seventeen" href="#">Покрывала</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="main-menu__item"><a class="regular-seventeen" href="#">Контакты</a></li>
+                                <li class="main-menu__item"><a class="regular-seventeen" href="#">О нас</a></li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="header_bottom_content_center">
-                        <img src="img/Logo.svg" width="100px" height="100px" alt="Логотип">
+                    <div class="header__bottom__content__center">
+                        <a href="#"><img src="img/Logo.svg" width="100px" height="100px" alt="Логотип"></a>
                     </div>
-                    <div class="header_bottom_content_right">
-                        <menu class="user-links">
-                            <li><a href="#">Войти</a></li>
-                            <li><div class="search"><img src="img/Icon/Search.svg" width="45px" height="45px" alt="Поиск"></div></li>
-                            <li><div class="cart"><img src="img/Icon/Cart.svg" width="45px" height="45px" alt="Корзина"></div></li>
-                            <li><div class="like"><img src="img/Icon/Like.svg" width="45px" height="45px" alt="Понравившиеся"></div></li>
-                        </menu>
+                    <div class="header__bottom__content__right">
+                        <nav class="user-page">
+                            <ul class="user-page__links">
+                                <li>
+                                    <a class="light-seventeen" href="#">Войти</a>
+                                </li>
+                                <li>
+                                    <button class="search"><img src="img/Icon/Search.svg" width="45px" height="45px" alt="Поиск"></button>
+                                </li>
+                                <li>
+                                    <button class="cart"><img src="img/Icon/Cart.svg" width="45px" height="45px" alt="Корзина"></button>
+                                </li>
+                                <li>
+                                    <a href="#" class="like"><img src="img/Icon/Like.svg" width="45px" height="45px" alt="Понравившиеся"></a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -97,6 +147,135 @@
     <footer class="footer">
     <!-- Footer -->
 
+        <div class="footer__form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        1
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer__links">
+            <div class="footer__links__top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <nav class="footer-menu">
+                                <ul class="footer-menu__list">
+                                    <li class="footer-menu__list__item">
+                                        <a class="list-title" href="#">Покупателям</a>
+                                    </li>
+                                    <li class="footer-menu__list__item">
+                                        <a href="#">Доставка и оплата</a>
+                                    </li>
+                                    <li class="footer-menu__list__item">
+                                        <a href="#">Возврат</a>
+                                    </li>
+                                    <li class="footer-menu__list__item">
+                                        <a href="#">Отзывы</a>
+                                    </li>
+                                    <li class="footer-menu__list__item">
+                                        <a href="#">Как купить?</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col">
+                            <nav class="footer-menu">
+                                <ul class="footer-menu__list">
+                                    <li class="footer-menu__list__item">
+                                        <a class="list-title" href="#">Информация</a>
+                                    </li>
+                                    <li class="footer-menu__list__item">
+                                        <a href="#">О компании</a>
+                                    </li>
+                                    <li class="footer-menu__list__item">
+                                        <a href="#">Контакты</a>
+                                    </li>
+                                    <li class="footer-menu__list__item">
+                                        <a href="#">Вакансии</a>
+                                    </li>
+                                    <li class="footer-menu__list__item">
+                                        <a href="#">Поддержка?</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col">
+                            <nav class="footer-menu">
+                                <ul class="footer-menu__list">
+                                    <li class="footer-menu__list__item">
+                                        <a class="list-title" href="#">Магазин</a>
+                                    </li>
+                                    <li class="footer-menu__list__item">
+                                        <a href="#">Пледы</a>
+                                    </li>
+                                    <li class="footer-menu__list__item">
+                                        <a href="#">Одеяла</a>
+                                    </li>
+                                    <li class="footer-menu__list__item">
+                                        <a href="#">Подушки</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col">
+                            <div class="col">
+                                <nav class="footer-menu">
+                                    <ul class="footer-menu__list">
+                                        <li class="footer-menu__list__item">
+                                            <a class="list-title" href="#">Социальные сети</a>
+                                        </li>
+                                        <li class="footer-menu__list__item">
+                                            <p>И получите бесплатную доставку для всех ваших заказов!</p>
+                                        </li>
+                                        <li class="footer-menu__list__item">
+                                            <ul class="sub-menu-social">
+                                                <li class="sub-menu-social__item">
+                                                    <img src="img/Icon/Small/Vk.svg">
+                                                </li>
+                                                <li class="sub-menu-social__item">
+                                                    <img src="img/Icon/Small/Facebook.svg">
+                                                </li>
+                                                <li class="sub-menu-social__item">
+                                                    <img src="img/Icon/Small/Instagram.svg">
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__links__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <nav class="footer-menu-bottom">
+                                <ul class="footer-menu-bottom__list">
+                                    <li class="footer-menu-bottom__list__item">
+                                        <a href="#">Постовщикам</a>
+                                    </li>
+                                    <li class="footer-menu-bottom__list__item">
+                                        <a href="#">Как купить?</a>
+                                    </li>
+                                    <li class="footer-menu-bottom__list__item">
+                                        <a href="#">Поддержка</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col">
+                            <p>©2020 — Все права защищены</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <!-- Footer -->
     </footer>

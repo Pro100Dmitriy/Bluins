@@ -12,7 +12,7 @@ body
 @import 'reset_css';
 
 .big-container
-    max-width: 1750px
+    max-width: 100%
     margin: 0 auto
 
 
@@ -23,35 +23,39 @@ body
     width: 100%
     z-index: $header-z-index
     color: white
-    &_top
+    &__top
         width: 100%
         background-color: $dark
-        padding: 0.2rem 1rem
-        &_content
+        padding: 0.2rem 2rem
+        &__content
             display: flex
             justify-content: space-between
-            &_left
+            &__left
                 display: flex
                 flex-direction: row
                 align-items: center
-                .social
-                    display: flex
-                    flex-direction: row
-                    margin-right: 1.3rem
-                    li
-                        margin-right: 0.5rem
-                        &:last-child
-                            margin-right: 0rem
-                .links
-                    display: flex
-                    flex-direction: row
-                    li
-                        margin-right: 2.4rem
-                        a
-                            color: $white
-                            &:hover
-                                text-decoration: none
-            &_right
+                .social-menu
+                    &__links
+                        display: flex
+                        flex-direction: row
+                        margin-right: 1.3rem
+                        li
+                            margin-right: 0.5rem
+                            &:last-child
+                                margin-right: 0rem
+                .site-menu
+                    &__links
+                        display: flex
+                        flex-direction: row
+                        li
+                            margin-right: 2.4rem
+                            a
+                                color: $white
+                                transition: all 0.3s ease
+                                &:hover
+                                    text-decoration: none
+                                    color: $blue-light
+            &__right
                 display: flex
                 flex-direction: row
                 div
@@ -62,13 +66,16 @@ body
                         margin-right: 0.8rem
                 .phone
                     margin-right: 6.3rem
-    &_bottom
-        padding: 1.6rem 1rem
-        &_content
+    &__bottom
+        padding: 0 2rem
+        position: relative
+        &__content
             display: flex
             justify-content: space-between
-            position: relative
-            menu
+            button
+                background: none
+                border: none 
+            ul
                 display: flex
                 flex-direction: row
                 align-items: center
@@ -76,22 +83,108 @@ body
                     color: $white
                     &:hover
                         text-decoration: none
-            &_left
-                .main-links
-                    li
-                        margin-right: 3rem
-            &_center
+            &__left
+                display: flex
+                align-items: center
+                .burger
+                    margin-right: 2.5rem
+                .main-menu
+                    &__links
+                        .main-menu__item
+                            a:hover
+                                &::after
+                                    width: 100%
+                            &:hover
+                                .sub-nav
+                                    opacity: 1
+                                    visibility: visible
+                                    &__item
+                                        transform: translate(0,0)
+                                        opacity: 1
+                        &>li
+                            padding: 1.8rem 0
+                        li
+                            margin-right: 3rem
+                            a
+                                position: relative
+                                padding: 0.5rem 0
+                                &::after
+                                    content: ''
+                                    position: absolute
+                                    bottom: 0px
+                                    left: 0
+                                    width: 0%
+                                    height: 2px
+                                    background: $dark
+                                    transition: all 0.3s ease
+                        .sub-nav
+                            position: absolute
+                            top: 100%
+                            left: 0
+                            width: 100%
+                            overflow: hidden
+                            visibility: hidden
+                            opacity: 0
+                            background: $white
+                            align-items: flex-start
+                            text-align: left
+                            padding: 4.1rem 6.5rem 5.6rem
+                            transition: all 0.3s ease
+                            transition-delay: 0.1s
+                            .medium-ninteen
+                                cursor: text
+                                &::after
+                                    content: none
+                            a
+                                color: $dark
+                            &>li
+                                margin-right: 15rem
+                            &__item
+                                position: relative
+                                transition: all 0.3s ease
+                                opacity: 0
+                                transition-delay: 0.1s
+                                &:nth-child(1) 
+                                    transform: translate(0, 50px)
+                                &:nth-child(2) 
+                                    transform: translate(0, 100px)
+                                &:nth-child(3) 
+                                    transform: translate(0, 150px)
+                                &__pages
+                                    display: flex
+                                    flex-direction: column
+                                    align-items: flex-start
+                                    margin-top: 1.3rem
+                                    &>li
+                                        margin-bottom: 0.8rem
+            &__center
                 position: absolute
                 top: 50%
                 left: 50%
                 transform: translate(-50%,-50%)
-            &_right
-                .user-links
-                    li 
-                        margin-left: 1.3rem
+            &__right
+                align-items: center
+                display: flex
+                .user-page
+                    &__links
+                        li 
+                            margin-left: 1.3rem
 
 
 
 
 .slider
     padding-top: 10rem
+
+
+
+// Footer
+
+.footer
+    &__form
+        border-top: 1px solid $line_gray
+    &__links
+        background: $light
+        &__top
+            border-bottom: 1px solid $line_gray
+        &__bottom
