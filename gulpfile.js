@@ -23,7 +23,11 @@ gulp.task('sass', function(){
 
 
 gulp.task('scripts', function(){
-    return gulp.src('bower_components/jquery/dist/jquery.min.js')
+    return gulp.src([
+        'bower_components/jquery/dist/jquery.min.js',
+        'bower_components/jquery-migrate/jquery-migrate.min.js',
+        'bower_components/slick-carousel/slick/slick.min.js'
+        ])
         .pipe( concat('scripts.min.js') )
         .pipe( uglify() )
         .pipe( gulp.dest( 'app/js' ) )
@@ -50,8 +54,8 @@ gulp.task('browser-sync', function(){
 
 
 gulp.task('watch', function(){
-    gulp.watch( 'app/sass/**/*.sass', gulp.parallel('sass') );
-    gulp.watch( 'app/js/**/*.js', gulp.parallel('scripts') );
+    gulp.watch( ['app/sass/**/*.sass', 'app/sass/**/*.scss'], gulp.parallel('sass') );
+    //gulp.watch( 'app/js/**/*.js', gulp.parallel('scripts') );
     gulp.watch( 'app/**/*.html', gulp.parallel('reload') );
 });
 

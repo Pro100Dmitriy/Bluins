@@ -5,9 +5,6 @@
 html
     font-size: 15px
 
-body
-    background: grey
-
 @import 'font_style';
 @import 'reset_css';
 
@@ -172,9 +169,7 @@ body
 
 
 
-
-.slider
-    padding-top: 10rem
+@import 'pages/main-page.sass';
 
 
 
@@ -192,11 +187,15 @@ body
 
 
 .footer__form
+    padding: 7rem 0 7rem 0
     &__container
         max-width: 780px
         margin: 0 auto
         .section-text
             text-align: center
+            margin-bottom: 3rem
+            &__title
+                margin-bottom: 1rem
         .form
             display: flex
             flex-direction: row
@@ -216,6 +215,7 @@ body
                     letter-spacing: 0.05rem
                     line-height: 2rem
                     color: $dark
+                    z-index: -1
                 &__email
                     width: 100%
                     padding: 0.74rem
@@ -233,3 +233,37 @@ body
                 background: $dark
                 border: none
                 border-radius: 0
+
+.footer__links
+    &__top
+        padding: 3.8rem 0
+        .footer-menu
+            &__list
+                &__item
+                    margin-bottom: 0.7rem
+                    &:first-child
+                        margin-bottom: 1.8rem
+                    &:last-child
+                        margin-bottom: 0
+                    &>a
+                        text-decoration: none
+                        color: $dark
+                    .sub-menu-social
+                        display: flex
+                        &__item
+                            margin-right: 0.45rem
+                    .list-description
+                        letter-spacing: 0 !important
+    &__bottom
+        padding: 1rem 0
+        .footer-menu-bottom
+            &__list
+                display: flex
+                flex-direction: row
+                &__item
+                    margin-right: 2.4rem
+                    &>a
+                        text-decoration: none
+                        color: $dark
+        .footer-text-bottom
+            text-align: right
