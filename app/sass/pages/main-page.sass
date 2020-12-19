@@ -1,6 +1,12 @@
 $white: #ffffff
 $light: #F7F7F7
+$dark: #17191A
+$blue: #70A0C4
+$dark-light: #4F565B
+$line_gray: #DBDBDB
+
    
+
 .main
    overflow: hidden
    
@@ -106,3 +112,157 @@ $light: #F7F7F7
                      height: 2px
                      background: $white
                      transition: all 0.3s ease
+
+
+      
+.category
+   padding: 6rem 0
+   border-bottom: 1px solid $line_gray
+   &__cart
+      position: relative
+      max-width: 350px
+      height: 537px
+      overflow: hidden
+      background: $blue
+      &:hover
+        .category__cart__img
+           transform: scale(1.1)
+      &__img
+         margin: 0 auto
+         height: 100%
+         transition: all 1.5s ease
+      &__text
+         width: 80%
+         position: absolute
+         z-index: 2
+         top: 50%
+         left: 50%
+         transform: translate(-50%, -50%)
+         text-align: center
+         .cart-title
+            color: $white
+         .cart-description
+            margin-top: 3.5rem
+            color: $white
+         .fill-button
+            margin-top: 3.5rem
+            display: inline-block
+            font-size: 1.13rem
+            font-family: 'Jost'
+            font-weight: 500
+            letter-spacing: 0.05rem
+            line-height: 2rem
+            background: $white
+            padding: 0.532em 1.9em
+            color: $dark
+            text-decoration: none
+
+
+.section-title
+   width: 100%
+   text-align: center
+   margin-bottom: 3rem
+   &__title
+      margin-bottom: 1rem
+   &__description
+
+
+.big-products
+   padding: 6rem 0
+   &__list
+      display: flex
+      justify-content: space-between
+      flex-direction: row
+      width: 100%
+      &__item
+
+.product-cart
+   max-width: 360px
+   &:hover
+      .product-cart__top
+         .fast-view
+            bottom: 0
+         .figure-product
+            &__first
+               transform: translate(-50%, -50%) scale(1.3)
+               opacity: 0
+            &__second
+               transform: translate(-50%, -50%) scale(1.1)
+      .product-cart__bottom
+         &__left
+            &__links
+               .price
+                  margin-top: -25px
+               .view-product-link
+                  margin-top: -25px
+   &__top
+      position: relative
+      width: 360px
+      height: 360px
+      overflow: hidden
+      margin-bottom: 7px
+      .new-icon
+         position: absolute
+         top: 1rem
+         right: 1rem
+         z-index: 3
+         font-family: 'Jost'
+         font-size: 0.8rem
+         letter-spacing: 0.05rem
+         color: $dark
+         background: $white
+         border-radius: 50px
+         padding: 0.42em 1.2em
+      .figure-product
+         width: 100%
+         height: 100%
+         position: relative
+         .product-img
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 100%
+            transition: all 1s ease
+         &__first
+            z-index: 2
+         &__second
+            z-index: 1
+      .fast-view
+         position: absolute
+         bottom: -37px
+         left: 0
+         z-index: 3
+         display: inline-block
+         width: 100%
+         text-align: center
+         text-decoration: none
+         color: $dark
+         background: rgba($white, 0.4)
+         padding: 0.5em 0
+         font-size: 1rem
+         font-family: 'Jost'
+         font-weight: 400
+         letter-spacing: 0.05rem
+         transition: all 0.3s ease
+   &__bottom
+      display: flex
+      justify-content: space-between
+      flex-direction: row
+      &__left
+         .product-title
+            margin-bottom: 0
+         &__links
+            overflow: hidden
+            height: 28px
+            .price
+               color: $dark-light
+               margin-top: 0
+               transition: all 0.3s ease
+            .view-product-link
+               color: $dark-light
+               text-decoration: none
+               margin-top: 0
+               transition: all 0.3s ease
+      &__right
+         .add-like
