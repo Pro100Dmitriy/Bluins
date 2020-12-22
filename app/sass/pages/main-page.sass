@@ -66,6 +66,16 @@ $bg-blue: #c3d2d9
                width: 0.7rem
                height: 0.7rem
                background: rgba($white, 1)
+      .slick-current
+         .title-slider
+            top: 0 !important
+            opacity: 1 !important
+         .description__text
+            top: 0 !important
+            opacity: 1 !important
+         .line-button
+            top: 0 !important
+            opacity: 1 !important
       &__item
          max-height: 1082px
          position: relative
@@ -79,39 +89,67 @@ $bg-blue: #c3d2d9
             left: 50%
             transform: translate(-50%,-50%)
             width: 1200px
-            .title-slider
-               color: $white
-               width: 64.5rem
+            .h2-cover
+               position: relative
+               height: 11rem
+               width: 100%
+               overflow: hidden
+               .title-slider
+                  position: absolute
+                  top: 100%
+                  left: 0
+                  color: $white
+                  width: 64.5rem
+                  transition: all 0.5s ease
+                  transition-delay: 0.5s
+                  opacity: 0
             .description
                padding: 2.8rem 0 0 1.8rem
                max-width: 40.6rem
-               &__text
-                  color: $white
-                  margin-bottom: 3.2rem
-               .line-button
-                  color: $white
-                  text-decoration: none
+               .description__text-cover
                   position: relative
-                  padding: 0.8rem 0
-                  font-size: 1.13rem
-                  font-family: 'Jost'
-                  font-weight: 500
-                  letter-spacing: 0.05rem
-                  line-height: 2rem
-                  transition: all 0.3s ease
-                  &:hover
-                     color: $light
+                  height: 6rem
+                  width: 100%
+                  overflow: hidden
+                  margin-bottom: 3.2rem
+                  .description__text
+                     position: absolute
+                     top: 100%
+                     color: $white
+                     transition: all 0.6s ease
+                     transition-delay: 0.6s
+                     opacity: 0
+               .line-button-cover
+                  height: 3rem
+                  width: 100%
+                  overflow: hidden
+                  .line-button
+                     color: $white
+                     text-decoration: none
+                     position: relative
+                     top: 100%
+                     padding: 0.8rem 0
+                     font-size: 1.13rem
+                     font-family: 'Jost'
+                     font-weight: 500
+                     letter-spacing: 0.05rem
+                     line-height: 2rem
+                     transition: all 0.7s ease
+                     transition-delay: 0.7s
+                     opacity: 0
+                     &:hover
+                        color: $light
+                        &::after
+                           width: 100%
                      &::after
-                        width: 100%
-                  &::after
-                     content: ''
-                     position: absolute 
-                     bottom: 0
-                     left: 0
-                     width: 0
-                     height: 2px
-                     background: $white
-                     transition: all 0.3s ease
+                        content: ''
+                        position: absolute 
+                        bottom: 0
+                        left: 0
+                        width: 0
+                        height: 2px
+                        background: $white
+                        transition: all 0.3s ease
 
 
       

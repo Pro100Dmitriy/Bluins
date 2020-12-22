@@ -1,8 +1,18 @@
 
+$('#burger__button').on('click',function(e){
+  e.preventDefault
+  $('#fullscreen-menu').addClass('left-ziro')
+})
+
+$('#close-button').on('click',function(e){
+  e.preventDefault
+  $('#fullscreen-menu').removeClass('left-ziro')
+})
 
 $('.slick-slider').slick({
    dots: true,
    infinite: true,
+   autoplay: false,
    speed: 500,
    fade: true,
    cssEase: 'linear',
