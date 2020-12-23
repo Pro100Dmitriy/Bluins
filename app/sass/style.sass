@@ -74,17 +74,41 @@ html
             background: linear-gradient(0deg, transparent, $dark-light)
         .fullscreen__nav__list
             .curent-hover
+                .fullscreen__sub-menu__item
+                    visibility: visible
+                    opacity: 1
+                    &:nth-child(1) 
+                        transform: translate(0, 0px)
+                    &:nth-child(2) 
+                        transform: translate(0, 0px)
+                    &:nth-child(3) 
+                        transform: translate(0, 0px)
+                    &:nth-child(4) 
+                        transform: translate(0, 0px)
+                &>a
+                    &::after
+                        width: 100%
                 .arrow-cover
                     background: rgba($dark-light, 0.1)
             &__item
                 display: flex
                 justify-content: space-between
                 flex-direction: row
-                margin-bottom: 1rem
+                margin-bottom: 1.3rem
                 &>a
                     color: $dark-light
                     text-decoration: none
                     text-transform: uppercase
+                    position: relative
+                    &::after
+                        content: ''
+                        position: absolute
+                        top: calc(98% - 2px)
+                        left: 0
+                        height: 2px
+                        width: 0
+                        background: $dark-light
+                        transition: all 0.3s ease
                 .arrow-cover
                     width: 2.5rem
                     height: 2.5rem
@@ -99,8 +123,25 @@ html
                     top: 0
                     left: calc(100% + 3rem)
                     display: flex
+                    width: calc(1110px - 345px)
+                    flex-wrap: wrap
+                    visibility: hidden
                     &__item
-                        margin-right: 12rem
+                        margin-right: 10rem
+                        margin-bottom: 8rem
+                        position: relative
+                        transition: all 0.3s ease
+                        opacity: 0
+                        transition-delay: 0.1s
+                        &:nth-child(1) 
+                            transform: translate(0, 25px)
+                        &:nth-child(2) 
+                            transform: translate(0, 50px)
+                        &:nth-child(3) 
+                            transform: translate(0, 75px)
+                            margin-right: 2rem
+                        &:nth-child(4) 
+                            transform: translate(0, 100px)
                         &>a
                             color: $dark
                             text-decoration: none
@@ -114,6 +155,21 @@ html
                                     text-decoration: none
                                     margin-bottom: 0.7rem
                                     display: inline-block
+                                    position: relative
+                                    &:hover
+                                        &::after
+                                            width: 100%
+                                    &::after
+                                        content: ''
+                                        position: absolute
+                                        bottom: 0px
+                                        left: 0
+                                        width: 0%
+                                        height: 2px
+                                        background: $dark
+                                        transition: all 0.3s ease
+
+
 
 
 .header
@@ -166,9 +222,45 @@ html
                         margin-right: 0.8rem
                 .phone
                     margin-right: 6.3rem
+    .white-bg
+        background: $white !important
+        border-bottom: 1px solid rgba($line_gray, 1)
+        ul
+            a
+                color: $dark
+        svg
+            path
+                fill: $dark !important
+    .header__bottom-fixed
+        position: fixed !important
+        top: 0 !important
+        width: 100%
+        .header__bottom
+            background: $white !important
+            border-bottom: 1px solid rgba($line_gray, 1)
+            box-shadow: 0 3px 10px rgba($dark, 0.2)
+            .main-menu__links
+                &>li
+                    padding: 1.5rem 0
+            .sub-nav
+                box-shadow: 0 4px 4px rgba($dark, 0.2)
+            ul
+                a
+                    color: $dark
+            svg
+                path
+                    fill: $dark !important
+    .header__bottom-cover
+        transition: all 1s ease
+        transition-delay: 0.1s
+        position: relative
+        top: -100%
     &__bottom
         padding: 0 2rem
         position: relative
+        border-bottom: 1px solid rgba($line_gray, 0)
+        transition: all 0.3s ease
+        transition-delay: 0.1s
         &__content
             display: flex
             justify-content: space-between
@@ -181,6 +273,8 @@ html
                 align-items: center
                 a
                     color: $white
+                    transition: all 0.3s ease
+                    transition-delay: 0.1s
                     &:hover
                         text-decoration: none
             &__left
@@ -188,12 +282,13 @@ html
                 align-items: center
                 .burger
                     margin-right: 2.5rem
+                    .burger__button
+                        svg
+                            path
+                                transition: all 0.3s ease !important
                 .main-menu
                     &__links
                         .main-menu__item
-                            a:hover
-                                &::after
-                                    width: 100%
                             &:hover
                                 .sub-nav
                                     opacity: 1
@@ -201,6 +296,9 @@ html
                                     &__item
                                         transform: translate(0,0)
                                         opacity: 1
+                                &>a
+                                    &::after
+                                        width: 100%
                         &>li
                             padding: 1.8rem 0
                         li
@@ -219,8 +317,9 @@ html
                                     transition: all 0.3s ease
                         .sub-nav
                             position: absolute
-                            top: 100%
+                            top: calc(100% + 1px)
                             left: 0
+                            z-index: $header__sub-nav-z-index
                             width: 100%
                             overflow: hidden
                             visibility: hidden
@@ -257,11 +356,17 @@ html
                                     margin-top: 1.3rem
                                     &>li
                                         margin-bottom: 0.8rem
+                                        &>a:hover
+                                            &::after
+                                                width: 100%
             &__center
                 position: absolute
                 top: 50%
                 left: 50%
                 transform: translate(-50%,-50%)
+                svg
+                    path
+                        transition: all 0.3s ease !important
             &__right
                 align-items: center
                 display: flex
@@ -269,6 +374,9 @@ html
                     &__links
                         li 
                             margin-left: 1.3rem
+                            svg
+                                path
+                                    transition: all 0.3s ease !important
 
 
 
