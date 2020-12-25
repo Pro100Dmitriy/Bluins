@@ -41,6 +41,9 @@ html
     background: $dark
     color: $white
     transition: all 0.3s ease
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     &__top
         background: $black
         display: flex
@@ -52,20 +55,22 @@ html
             &::after
                 background: $white
     &__center
+        height: 100%
+        overflow: hidden
         &__nav
             &__list
                 padding: 2.66rem
                 .cart-list-item
                     width: 100%
                     display: flex
-                    flex-direction: row
+                    //flex-direction: row
                     justify-content: space-between
                     .item__img-cover
                         width: 100px
                         height: 100px
-                        display: block
                         overflow: hidden
                         position: relative
+                        margin-right: .8rem
                         &__img
                             position: absolute
                             top: 50%
@@ -73,8 +78,50 @@ html
                             transform: translate(-50%,-50%)
                             width: 100%
                     .item__content
-    &__bottom
+                        &__title
+                            display: flex
+                            justify-content: space-between
+                            &>a
+                                text-decoration: none
+                                color: $white
+                                transition: all 0.3s ease
+                                &:hover
+                                    text-decoration: none
+                                    color: $light
+                        .product-quantity-price
+                            display: flex
+                            justify-content: space-between
 
+    &__bottom
+        padding: 1.6rem 2.66rem 2.66rem 2.66rem
+        .summ-for-price
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 1.6rem
+        .stroke-button
+            width: 100%
+            text-align: center
+
+
+
+.stroke-button
+    font-family: 'Jost'
+    font-size: 1.13rem
+    font-weight: 500
+    letter-spacing: .05rem
+    line-height: 2rem
+    color: $white
+    display: inline-block
+    border: 2px solid $white
+    padding: .413em 1.9em
+    text-decoration: none
+    transition: all 0.3s ease
+    &:hover
+        text-decoration: none
+        color: $dark
+        background: $white
 
 .close-button
     width: 2.5rem
