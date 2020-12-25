@@ -163,8 +163,10 @@ $bg-blue: #c3d2d9
       overflow: hidden
       background: $blue
       &:hover
-        .category__cart__img
-           transform: scale(1.1)
+         .fill-button
+            background: $light
+         .category__cart__img
+            transform: scale(1.1)
       &__img
          margin: 0 auto
          height: 100%
@@ -194,7 +196,7 @@ $bg-blue: #c3d2d9
             padding: 0.532em 1.9em
             color: $dark
             text-decoration: none
-
+            transition: all 0.3s ease
 
 .section-title
    width: 100%

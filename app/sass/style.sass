@@ -14,6 +14,103 @@ html
 
 .left-ziro
     left: 0 !important
+.right-ziro
+    right: 0 !important
+
+
+// Cart
+.cart-overlay
+    position: fixed
+    right: 0
+    top: 0
+    z-index: $cart-menu-overlay-z-index
+    width: 100%
+    height: 100vh
+    background: rgba($blue, 0)
+    visibility: hidden
+    transition: all 0.4s ease
+
+
+.cart
+    position: fixed
+    right: -100%
+    top: 0
+    z-index: $cart-menu-z-index
+    width: 450px
+    height: 100vh
+    background: $dark
+    color: $white
+    transition: all 0.3s ease
+    &__top
+        background: $black
+        display: flex
+        justify-content: space-between
+        padding: 1.4rem 2.66rem
+        .close-button
+            &::before
+                background: $white
+            &::after
+                background: $white
+    &__center
+        &__nav
+            &__list
+                padding: 2.66rem
+                .cart-list-item
+                    width: 100%
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    .item__img-cover
+                        width: 100px
+                        height: 100px
+                        display: block
+                        overflow: hidden
+                        position: relative
+                        &__img
+                            position: absolute
+                            top: 50%
+                            left: 50%
+                            transform: translate(-50%,-50%)
+                            width: 100%
+                    .item__content
+    &__bottom
+
+
+.close-button
+    width: 2.5rem
+    height: 2.5rem
+    background: rgba($dark-light, 0.1)
+    border-radius: 50%
+    border: none
+    position: relative
+    &:hover
+        &::before
+            transform: translate(-50%, -50%) rotate(0deg)
+            background: $blue
+        &::after
+            transform: translate(-50%, -50%) rotate(0deg)
+            background: $blue
+    &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%) rotate(45deg)
+        width: 50%
+        height: 2px
+        background: $dark-light
+        transition: all 0.3s ease
+    &::after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%) rotate(-45deg)
+        width: 50%
+        height: 2px
+        background: $dark-light
+        transition: all 0.3s ease
+
 
 .fullscreen-menu
     position: fixed
@@ -26,40 +123,6 @@ html
     transition: all 0.3s ease
     .close-button-cover
         padding: 2rem 0
-        .close-button
-            width: 2.5rem
-            height: 2.5rem
-            background: rgba($dark-light, 0.1)
-            border-radius: 50%
-            border: none
-            position: relative
-            &:hover
-                &::before
-                    transform: translate(-50%, -50%) rotate(0deg)
-                    background: $blue
-                &::after
-                    transform: translate(-50%, -50%) rotate(0deg)
-                    background: $blue
-            &::before
-                content: ''
-                position: absolute
-                top: 50%
-                left: 50%
-                transform: translate(-50%, -50%) rotate(45deg)
-                width: 50%
-                height: 2px
-                background: $dark-light
-                transition: all 0.3s ease
-            &::after
-                content: ''
-                position: absolute
-                top: 50%
-                left: 50%
-                transform: translate(-50%, -50%) rotate(-45deg)
-                width: 50%
-                height: 2px
-                background: $dark-light
-                transition: all 0.3s ease
     &__nav
         position: relative
         max-width: 23rem
@@ -225,6 +288,14 @@ html
     .white-bg
         background: $white !important
         border-bottom: 1px solid rgba($line_gray, 1)
+        .main-menu__item
+            &>a
+                &::after
+                    background: $dark
+            .sub-nav__item__pages
+                a
+                    &::after
+                        background: $dark
         ul
             a
                 color: $dark
@@ -235,6 +306,14 @@ html
         position: fixed !important
         top: 0 !important
         width: 100%
+        .main-menu__item
+            &>a
+                &::after
+                    background: $dark
+            .sub-nav__item__pages
+                a
+                    &::after
+                        background: $dark
         .header__bottom
             background: $white !important
             border-bottom: 1px solid rgba($line_gray, 1)
@@ -313,7 +392,7 @@ html
                                     left: 0
                                     width: 0%
                                     height: 2px
-                                    background: $dark
+                                    background: $white
                                     transition: all 0.3s ease
                         .sub-nav
                             position: absolute
@@ -418,21 +497,31 @@ html
                 &__label
                     position: absolute
                     top: 50%
-                    left: 1.6rem
+                    left: 1.4rem
+                    z-index: 3 !important
                     transform: translate(0%, -50%)
                     font-size: 1rem
                     font-family: 'Jost'
                     font-weight: 400
-                    letter-spacing: 0.05rem
-                    line-height: 2rem
                     color: $dark
                     z-index: -1
+                    transition: all 0.3s ease
+                    display: inline-block
+                    padding: 0.1rem 0.4rem
+                .label-focus
+                    top: 0
+                    transform: translateY(-50%)
+                    background: $white
+                    color: $dark-light
                 &__email
                     width: 100%
-                    padding: 0.74rem
+                    padding: 0.74rem 1.5rem
                     border: 2px solid $dark
                     border-radius: 0
                     background: none
+                    font-size: 1rem
+                    font-family: 'Jost'
+                    font-weight: 500
             &__button
                 padding: 0.534em 1.828em
                 font-size: 1.13rem
@@ -444,6 +533,9 @@ html
                 background: $dark
                 border: none
                 border-radius: 0
+                transition: all 0.3s ease
+                &:hover
+                    background: $blue
 
 .footer__links
     &__top
@@ -456,9 +548,26 @@ html
                         margin-bottom: 1.8rem
                     &:last-child
                         margin-bottom: 0
+                    .list-title
+                        &::after
+                            content: none !important
                     &>a
                         text-decoration: none
                         color: $dark
+                        position: relative
+                        padding: 0.5rem 0
+                        &:hover
+                            &::after
+                                width: 100%
+                        &::after
+                            content: ''
+                            position: absolute
+                            bottom: 0
+                            left: 0
+                            width: 0
+                            height: 2px
+                            background: $dark
+                            transition: all 0.3s ease
                     .sub-menu-social
                         display: flex
                         &__item
@@ -476,5 +585,8 @@ html
                     &>a
                         text-decoration: none
                         color: $dark
+                        transition: all 0.3s ease
+                        &:hover
+                            color: $blue
         .footer-text-bottom
             text-align: right
