@@ -236,9 +236,9 @@
          &__left
             &__links
                .price
-                  margin-top: -25px
+                  margin-top: -30px
                .view-product-link
-                  margin-top: -25px
+                  margin-top: -30px
    &__top
       position: relative
       width: 360px
@@ -295,10 +295,11 @@
       flex-direction: row
       &__left
          .product-title
-            margin-bottom: 0
+            margin-bottom: 0.3rem
          &__links
             overflow: hidden
             height: 28px
+            margin-bottom: 0.5rem
             .price
                color: $dark-light
                margin-top: 0
@@ -308,6 +309,28 @@
                text-decoration: none
                margin-top: 0
                transition: all 0.3s ease
+         .product-color
+            display: flex
+            &__item
+               margin-right: 0.66rem
+               .color-select-circle
+                  width: 18px
+                  height: 18px
+                  display: inline-block
+                  border-radius: 100px
+                  position: relative
+               .color-red
+                  background: $red
+               .color-blue
+                  background: $blue
+               .color-select
+                  &::after
+                     content: ''
+                     @include absolute-align-center
+                     width: 24px
+                     height: 24px
+                     border: 1px solid $dark
+                     border-radius: 100px
       &__right
          .add-like
 
