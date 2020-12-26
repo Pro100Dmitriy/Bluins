@@ -1,0 +1,13 @@
+@mixin after-line ($color)
+   &:hover
+      &::after
+         width: 100%
+   &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 0
+      height: 2px
+      background: $color
+      transition: all 0.3s ease
