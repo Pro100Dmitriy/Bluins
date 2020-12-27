@@ -74,8 +74,28 @@
                padding-right: 0.3rem
             .sort-button
                padding-left: 0.3rem
+            .grid-button-active
+               svg
+                  &:first-child
+                     opacity: 1 !important
+                  &:last-child
+                     opacity: 0 !important
+               &::after
+                  width: 100%
             .grid-button
+               position: relative
+               width: 33px
+               height: 33px
                margin: 0 0.3rem 0 0
+               svg
+                  position: absolute
+                  top: 0
+                  left: 0
+                  transition: all 0.2s ease
+                  &:first-child
+                     opacity: 0
+                  &:last-child
+                     opacity: 1
                &:last-child
                   margin: 0
 
@@ -83,6 +103,8 @@
 
 .products
    padding: 0 2rem
+   .products__list
+      transition: all 0.3s ease
    .fore-item
       display: flex
       flex-direction: row
@@ -103,6 +125,12 @@
             .product-cart__top
                width: 100%
                height: calc( (100vw - 12rem) / 4 )
+            .product-cart__bottom
+               &__left
+                  .additing-block-information
+                     display: none
+               &__right
+                  display: none
    .five-item
       display: flex
       flex-direction: row
@@ -123,6 +151,12 @@
             .product-cart__top
                width: 100%
                height: calc( (100vw - 14rem) / 5 )
+            .product-cart__bottom
+               &__left
+                  .additing-block-information
+                     display: none
+               &__right
+                  display: none
    .list-item
       display: flex
       flex-direction: row
@@ -147,6 +181,13 @@
          .product-cart
             max-width: 100%
             display: flex
-            .product-cart__top
+            &__top
                width: 400px
                height: 400px
+            &__bottom
+               padding: 2.53rem 2.2rem
+               &__left
+                  &__links
+                     margin: 1rem 0
+               &__right
+                  display: none
