@@ -475,11 +475,141 @@
                     <h2 class="h2-style">Описание</h2>
                 </div>
                 <div class="description-product__text">
-                    <p>Здесь будут отображаться самые новые и продоваемые продаваемые товары и услуги. Здесь будут отображать-ся самые новые и продоваемые продаваемые товары и услуги.</p>
-                    <p>Здесь будут отображаться самые новые и продоваемые продаваемые товары и услуги.</p>
+                    <p class="regular-fiveteen">Здесь будут отображаться самые новые и продоваемые продаваемые товары и услуги. Здесь будут отображать-ся самые новые и продоваемые продаваемые товары и услуги.</p>
+                    <p class="regular-fiveteen">Здесь будут отображаться самые новые и продоваемые продаваемые товары и услуги.</p>
                 </div>
             </div>
         </section>
+
+        <section class="comments-product">
+            <div class="container">
+                <div class="section-product__title">
+                    <h2 class="h2-style">Комментарии</h2>
+                </div>
+                <div class="small-container">
+                    <div class="comments-product__writed">
+                        <ul class="comments-product__writed__list">
+                            <!-- Comment List -->
+                            <li class="comment__item">
+                                <div class="comment__item__avatar-cover">
+                                    <img class="comment__item__avatar-cover__img" src="img/product_1.jpg" alt="avatar">
+                                </div>
+                                <div class="comment__item__text">
+                                    <div class="comment__item__text__info">
+                                        <div class="comment__name-date">
+                                            <p class="comment__name-date__name medium-ninteen">Дмитрий Шестак</p>
+                                            <p class="comment__name-date__date medium-fiveteen">02 Декабря 2020</p>
+                                        </div>
+                                        <div class="comment-rating">
+                                            <p class="comment-rating__stars">
+                                                <span class="">
+                                                    <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                                    <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                                    <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                                    <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                                    <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="comment__item__text__message regular-fiveteen">
+                                        <p>Все это можно приобрести по приятным ценам по наличному и безналичному расчету.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="comment__item">
+                                <div class="comment__item__avatar-cover">
+                                    <img class="comment__item__avatar-cover__img" src="img/product_1.jpg" alt="avatar">
+                                </div>
+                                <div class="comment__item__text">
+                                    <div class="comment__item__text__info">
+                                        <div class="comment__name-date">
+                                            <p class="comment__name-date__name medium-ninteen">Дмитрий Шестак</p>
+                                            <p class="comment__name-date__date medium-fiveteen">02 Декабря 2020</p>
+                                        </div>
+                                        <div class="comment-rating">
+                                            <p class="comment-rating__stars">
+                                                <span class="">
+                                                    <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                                    <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                                    <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                                    <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                                    <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="comment__item__text__message regular-fiveteen">
+                                        <p>Все это можно приобрести по приятным ценам по наличному и безналичному расчету.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="comment__item">
+                                <div class="comment__item__avatar-cover">
+                                    <img class="comment__item__avatar-cover__img" src="img/product_1.jpg" alt="avatar">
+                                </div>
+                                <div class="comment__item__text">
+                                    <div class="comment__item__text__info">
+                                        <div class="comment__name-date">
+                                            <p class="comment__name-date__name medium-ninteen">Дмитрий Шестак</p>
+                                            <p class="comment__name-date__date medium-fiveteen">02 Декабря 2020</p>
+                                        </div>
+                                        <div class="comment-rating">
+                                            <p class="comment-rating__stars">
+                                                <span class="">
+                                                    <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                                    <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                                    <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                                    <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                                    <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="comment__item__text__message regular-fiveteen">
+                                        <p>Все это можно приобрести по приятным ценам по наличному и безналичному расчету.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Comment List -->
+                        </ul>
+                        <button class="stroke-button-dark">Добавить комментарий</button>
+                    </div>
+                    <div class="comments-product__add">
+                        <form class="comment-form" method="POST" action="/">
+                            <p class="comments-notes">Поля помеченные <small>*</small> обязательны для заполнения.</p>
+                            <div class="comments-rating">
+                                <label class="comments-rating__label">Твой рейтинг *</label>
+                                <p class="stars">
+                                    <span class="">
+                                        <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                        <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                        <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                        <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                        <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="comments__email-name"> 
+                                <p class="el-input comments-name">
+                                    <label class="el-input__label">Имя*</label>
+                                    <input class="el-input__field" type="text" placeholder="" required>
+                                </p>
+                                <p class="el-input comments-email">
+                                    <label class="el-input__label">Email*</label>
+                                    <input class="el-input__field" type="text" placeholder="" required>
+                                </p>
+                            </div>
+                            <p class="el-input comments-textarea">
+                                <label class="el-input__label">Ваше сообщение*</label>
+                                <textarea class="el-input__field" name="comment" cols="45" rows="8" required></textarea>
+                            </p>
+                            <button class="el-form__button">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section> 
 
         <section class="same-product">
             <div class="container">

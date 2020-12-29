@@ -81,16 +81,34 @@ $(document).on('wheel',function(e){
 
 //Email
 $('#fotter-email').on('focus',function(e){
-  console.log(e.handleObj.origType);
   $('#fotter-email-label').addClass('label-focus');
 });
 $('#fotter-email').on('blur',function(e){
   if(this.value){
-    console.log(this.value);
+
   }else{
     $('#fotter-email-label').removeClass('label-focus');
   }
 });
+
+
+
+//el-form
+let elInput;
+
+$('.el-input__field').on('focus',function(e){
+  elInput = this.previousSibling.previousSibling;
+  $(elInput).addClass('el-label-focus');
+});
+$('.el-input__field').on('blur',function(e){
+  if(this.value){
+
+  }else{
+    elInput = this.previousSibling.previousSibling;
+    $(elInput).removeClass('el-label-focus');
+  }
+});
+
 
 
 // Product grid
