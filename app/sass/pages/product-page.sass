@@ -191,3 +191,53 @@
                      margin: 1rem 0
                &__right
                   display: none
+
+.paggination
+   margin-top: 4rem
+   display: flex
+   flex-direction: row
+   justify-content: center
+   .page-arrow
+      width: 48px
+      height: 48px
+      display: flex
+      justify-content: center
+      align-items: center
+      background: $light
+      transition: all 0.3s ease 
+      &:hover
+         background: rgba($line_gray, 0.6)
+   .prev-no
+      opacity: 0.3
+      background: none
+      &:hover
+         background: none
+   .page-prev
+      margin-right: 2rem
+   .page-next
+      margin-left: 2rem
+   &__list
+      display: flex
+      flex-direction: row
+      .active-page
+         background: $light
+      &__item
+         width: 48px
+         height: 48px
+         display: flex
+         justify-content: center
+         align-items: center
+         background: none
+         border: 2px solid $light
+         margin-right: 1rem
+         transition: all 0.3s ease 
+         &:last-child
+            margin-right: 0
+         &:hover
+            background: $light
+         &>a
+            font-size: 1rem
+            font-family: 'Jost'
+            font-weight: 500
+            letter-spacing: 0.05rem
+            color: $dark

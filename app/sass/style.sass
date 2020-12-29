@@ -8,6 +8,7 @@ html
 
 @import 'font_style';
 @import 'reset_css';
+@import 'elements';
 
 .big-container
     max-width: 100%
@@ -561,6 +562,7 @@ html
                 svg
                     path
                         transition: all 0.3s ease !important
+                        fill: $white
             &__right
                 align-items: center
                 display: flex
@@ -576,12 +578,14 @@ html
 
 @import 'pages/main-page.sass';
 @import 'pages/product-page.sass';
+@import 'pages/product-single-page.sass';
 
 
 
 // Footer
 
 .footer
+    margin-top: 15rem
     &__form
         border-top: 1px solid $line_gray
     &__links

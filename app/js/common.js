@@ -184,3 +184,15 @@ $('#feedback__slider__text').slick({
   nextArrow: '<button type="button" class="slick-next"><img src="img/Icon/Dark/next.svg" alt="Next"></button>',
   prevArrow: '<button type="button" class="slick-prev"><img src="img/Icon/Dark/prev.svg" alt="Prev"></button>'
 });
+
+
+$('#information-product__sliders__slick').slick({
+  dots: true,
+  infinite: true,
+  autoplay: false,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear',
+  nextArrow: '<button type="button" class="slick-next"><img src="img/Icon/Dark/next.svg" alt="Next"></button>',
+  prevArrow: '<button type="button" class="slick-prev"><img src="img/Icon/Dark/prev.svg" alt="Prev"></button>'
+});
