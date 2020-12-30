@@ -109,6 +109,10 @@ $('.el-input__field').on('blur',function(e){
   }
 });
 
+$('#comments-hidden-toggle').on('click', function(){
+  $('#comments-toggle').toggleClass('comments-hidden')
+});
+
 
 
 // Product grid
