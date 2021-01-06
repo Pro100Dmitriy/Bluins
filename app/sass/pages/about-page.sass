@@ -1,0 +1,113 @@
+@import '../mixin';
+@import '../vars';
+
+@import '../elements'
+
+
+.about__header__bottom
+   .main-menu__item
+      &>a
+         color: $dark
+         &::after
+            background: $dark !important
+   .user-page__links
+      li
+         a
+            color: $dark
+   svg
+      path
+         fill: $dark !important
+
+
+.about-start-img
+   width: 100%
+   height: 750px
+   background: $blue-light
+   margin-bottom: 3rem
+   &__content
+      text-align: left
+      margin: 16rem auto
+      color: $white
+      .start-img__breadcrumbs
+         margin: 0
+         a
+            color: $dark-light
+      h1
+         color: $dark
+         margin-bottom: 2rem
+      &__qoute
+         border-left: 2px solid $dark
+         width: 500px
+         color: $dark-light
+         padding: 1rem 0 1rem 1rem
+         i
+            font-style: normal
+            font-weight: bold
+
+
+
+.minus-margin
+   margin-top: -10rem
+
+
+.first-message
+   margin-bottom: 10rem
+   background: $white
+   padding-top: 3rem
+   h2
+      color: $dark
+      text-align: center
+      margin-bottom: 3rem
+   &__table
+      display: flex
+      p
+         color: $dark-light
+         margin-bottom: 2rem
+      &__first-column
+         width: 50%
+         padding-right: 1rem
+      &__second-column
+         width: 50%
+         padding-left: 1rem
+
+
+
+.qualitu-comf
+   margin-bottom: 4rem
+   &__flex
+      display: flex
+      &__img-cover
+         width: 652px
+         height: 367px
+         position: relative
+         overflow: hidden
+         display: block
+         margin-right: 3rem
+         &__img
+            @include absolute-align-center
+            width: 100%
+      &__text
+         width: calc(100% - (652px + 3rem) )
+         h2
+            color: $dark
+            margin-bottom: 3rem
+         .paragraph
+            color: $dark-light
+            display: inline-block
+            margin-bottom: 2rem
+            &:last-child
+               margin-bottom: 0
+
+
+.about-page
+   margin-bottom: 5rem
+
+.about-feedback
+   background: none !important
+   padding: 5rem 0 6rem !important
+
+
+
+.about-question-form
+   background: $light
+   padding: 6rem 0

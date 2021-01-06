@@ -131,3 +131,32 @@
       text-decoration: none
       color: $dark
       border: 2px solid $dark
+
+
+
+
+// Breadcrumbs
+
+.start-img__breadcrumbs
+   width: fit-content
+   margin: 0 auto
+   margin-top: 1.6rem
+   &__list
+      display: flex
+      flex-direction: row
+      align-items: center
+      &__item
+         position: relative
+         a
+            font-size: 1rem
+            font-family: 'Jost'
+            font-weight: 300
+            color: $white
+            &::after
+               content: '/'
+               margin: 0 4px
+         &:last-child
+            a
+               font-weight: 500
+               &::after
+                  content: ''

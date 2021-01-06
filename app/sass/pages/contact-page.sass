@@ -1,0 +1,77 @@
+@import '../mixin';
+@import '../vars';
+
+@import '../elements'
+
+
+
+.contact__start-img
+   width: 100%
+   height: 750px
+   background: url('../img/slide-2.jpg') center/cover no-repeat
+   margin-bottom: 3rem
+   &__content
+      text-align: center
+      margin: 21.4rem auto
+      color: $white
+
+
+.information
+   margin-bottom: 10rem
+   .section-title
+      margin-bottom: 3.66rem
+   &__content
+      &__list
+         display: flex
+         flex-direction: row
+         justify-content: center
+         &__item
+            width: calc( (100% - 340px) / 2  )
+            span, a, i
+               font-size: 1rem
+               font-family: 'Jost'
+               font-weight: 400
+               letter-spacing: 0.05rem
+               color: $dark-light
+               font-style: normal
+               margin-bottom: 0.66rem
+               display: inline-block
+         .inf-phone
+            text-align: right
+         .inf-email
+            width: 340px
+            text-align: center
+            a
+               color: $blue
+         .inf-time
+            text-align: left
+            i
+               color: $blue
+         .inf-title
+            font-size: 1rem
+            font-family: 'Jost'
+            font-weight: 500
+            letter-spacing: 0.05rem
+            margin-bottom: 0.8rem
+
+
+.question-form
+   &__content
+      .comment-form
+         text-align: center
+         .comments-notes
+            width: 100%
+            text-align: left
+            font-size: 1rem
+            font-family: 'Jost'
+            font-weight: 400
+            color: $dark-light
+            margin-bottom: 1rem
+            small
+               color: $red
+         .comments__email-name
+            margin-bottom: 2rem
+            .comments-name, .comments-email, .comments-phone
+               margin-bottom: 2rem
+         .comments-textarea
+            margin-bottom: 2rem
