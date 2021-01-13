@@ -32,6 +32,25 @@ $('#close-button-cart').on('click',function(e){
 })
 
 
+// filter Menu
+$('#prod-filter_open-menu').on('click',function(e){
+  e.preventDefault;
+  $('#prod-filter-menu').addClass('left-ziro');
+  $('#prod-filter-overlay').css('visibility','visible');
+  setTimeout(function(){
+    $('#prod-filter-overlay').css('background','rgba(180,197,204, 0.4)');
+  }, 100);
+})
+$('#close-button-prod-filter').on('click',function(e){
+  e.preventDefault;
+  $('#prod-filter-menu').removeClass('left-ziro');
+  $('#prod-filter-overlay').css('background','rgba(180,197,204, 0)');
+  setTimeout(function(){
+    $('#prod-filter-overlay').css('visibility', 'hidden');
+  }, 400);
+})
+
+
 // Menu
 $('.main-menu__item').on('mouseover',function(e){
   if(this.childNodes[3]){

@@ -1,0 +1,90 @@
+@import '../mixin';
+@import '../vars';
+
+@import '../elements'
+
+
+
+.ansQuest__start-img
+   width: 100%
+   height: 750px
+   background: url('../img/slide-1.jpg') center/cover no-repeat
+   margin-bottom: 3rem
+   &__content
+      text-align: center
+      margin: 21.4rem auto
+      color: $white
+
+
+
+.first-video
+   margin-bottom: 10rem
+   &__content
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      &__frame
+         width: 620px
+         height: 366px
+         background: $blue-light
+      &__plane
+         margin-right: 3rem
+         p
+            color: $dark-light
+            a
+               color: $blue
+               text-decoration: underline
+
+
+.text-block
+   margin-bottom: 10rem
+   &__content
+      width: 100%
+      &__text
+         p
+            color: $dark-light
+            a
+               color: $blue
+               text-decoration: underline
+            i
+               color: $blue
+               font-style: normal
+
+
+.mixed-block
+   margin-bottom: 10rem
+   &__item
+      width: 780px
+      margin: 0 auto
+      margin-bottom: 6rem
+      &:last-child
+         margin-bottom: 0
+      &__text
+         p
+            color: $dark-light
+            a
+               color: $blue
+               text-decoration: underline
+            i
+               color: $blue
+               font-style: normal
+      &__frame
+         width: 620px
+         height: 500px
+         background: $blue-light
+         display: block
+      &__plane
+         max-width: calc( 100% - 620px - 3rem )
+         margin-left: 3rem
+         p
+            color: $dark-light
+            a
+               color: $blue
+               text-decoration: underline
+   &__frame
+      width: 100%
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
