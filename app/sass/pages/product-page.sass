@@ -25,9 +25,138 @@
    background: $dark
    color: $white
    transition: all 0.3s ease
-   display: flex
-   flex-direction: column
-   justify-content: space-between
+   &__top
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 1.4rem 2.66rem
+      background: $black
+      .prod-filter__close-button
+         background: $white
+         color: $dark
+         border: none
+         padding: .534em 1.828em
+         font-size: 1.13rem
+         font-family: 'Jost'
+         font-weight: 500
+         letter-spacing: .05rem
+         line-height: 2rem
+         transition: all 0.3s ease
+         &:hover
+            background: $light
+   &__bottom
+      padding: 1.4rem 2.66rem
+      .prod-filter__customs
+         .customs__list
+            .cust-active
+               margin-bottom: 0
+               ul
+                  margin-top: -120px
+               .customs__list__item__title
+                  span
+                     &::before
+                        transform: translateY(-50%) rotate(0deg)
+                     &::after
+                        transform: translateY(-50%) rotate(0deg)
+            &__item
+               margin-bottom: 2.5rem
+               transition: all 0.3s ease
+               &__title
+                  width: 100%
+                  display: flex
+                  align-items: center
+                  justify-content: space-between
+                  padding: 0.5rem 4px
+                  h6
+                     font-size: 1.26rem
+                     font-family: 'Jost'
+                     font-weight: 500
+                     letter-spacing: 0.05rem
+                     font-style: normal
+                     color: $white
+                     margin: 0
+                     cursor: pointer
+                  span
+                     width: 15px
+                     height: 15px
+                     display: block
+                     position: relative
+                     right: 0
+                     &::before
+                        content: ''
+                        position: absolute
+                        top: 50%
+                        left: 0%
+                        transform: translateY(-50%) rotate(-45deg)
+                        width: 50%
+                        height: 2px
+                        background: $white
+                        border-radius: 3px
+                        transition: all 0.3s ease
+                     &::after
+                        content: ''
+                        position: absolute
+                        top: 50%
+                        left: 35%
+                        transform: translateY(-50%) rotate(45deg)
+                        width: 50%
+                        height: 2px
+                        background: $white
+                        border-radius: 3px
+                        transition: all 0.3s ease
+               .item__nav
+                  overflow: hidden
+                  transition: all 0.3s ease
+                  padding: 4px
+                  ul
+                     transition: all 0.3s ease
+                     &>li
+                        a
+                           font-size: 1rem
+                           font-family: 'Jost'
+                           font-weight: 300
+                           letter-spacing: 0.05rem
+                           line-height: 2rem
+                           color: $white
+                           transition: all 0.3s ease
+                           &:hover
+                              color: $line_gray
+                  .customs__cl
+                     display: flex
+                     &__item
+                        margin-right: 1rem
+                        .cl-circle
+                           width: 20px
+                           height: 20px
+                           display: inline-block
+                           border-radius: 100px
+                           position: relative
+                           &:hover
+                              &::after
+                                 opacity: 1
+                           &::after
+                              content: ''
+                              @include absolute-align-center
+                              width: 24px
+                              height: 24px
+                              border: 1px solid $white
+                              border-radius: 100px
+                              opacity: 0
+                              transition: all 0.3s ease
+                        .red
+                           background: #CF7878
+                        .black
+                           background: $black
+                        .blue
+                           background: $blue
+                        .gold
+                           background: #D9C2AD
+                        .grey
+                           background: #C9C9C9
+                           
+
+
+
 
 //filter
 

@@ -50,6 +50,14 @@ $('#close-button-prod-filter').on('click',function(e){
   }, 400);
 })
 
+let custItemPrev;
+
+$('.groupe-cust-title').on('click', function(e){
+  e.preventDefault
+  custItemPrev = this.parentElement.parentElement;
+  $(custItemPrev).toggleClass('cust-active');
+});
+
 
 // Menu
 $('.main-menu__item').on('mouseover',function(e){

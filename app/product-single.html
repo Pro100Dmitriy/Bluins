@@ -574,38 +574,40 @@
                             <!-- Comment List -->
                         </ul>
                         <button id="comments-hidden-toggle" class="stroke-button-dark">Добавить комментарий</button>
-                    </div> 
-                    <div id="comments-toggle" class="comments-product__add comments-hidden">
-                        <form class="comment-form" method="POST" action="/">
-                            <p class="comments-notes">Поля помеченные <small>*</small> обязательны для заполнения.</p>
-                            <div class="comments-rating">
-                                <label class="comments-rating__label">Твой рейтинг *</label>
-                                <p class="stars">
-                                    <span class="">
-                                        <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
-                                        <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
-                                        <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
-                                        <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
-                                        <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
-                                    </span>
+                    </div>
+                    <div class="comment-form-box">
+                        <div id="comments-toggle" class="comments-product__add comments-hidden">
+                            <form class="comment-form" method="POST" action="/">
+                                <p class="comments-notes">Поля помеченные <small>*</small> обязательны для заполнения.</p>
+                                <div class="comments-rating">
+                                    <label class="comments-rating__label">Твой рейтинг *</label>
+                                    <p class="stars">
+                                        <span class="">
+                                            <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                            <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                            <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                            <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                            <a href="#"><img src="img/Icon/Dark/Star.svg" alt="Star"></a>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="comments__email-name"> 
+                                    <p class="el-input comments-name">
+                                        <label class="el-input__label">Имя*</label>
+                                        <input class="el-input__field" type="text" placeholder="" required>
+                                    </p>
+                                    <p class="el-input comments-email">
+                                        <label class="el-input__label">Email*</label>
+                                        <input class="el-input__field" type="text" placeholder="" required>
+                                    </p>
+                                </div>
+                                <p class="el-input comments-textarea">
+                                    <label class="el-input__label">Ваше сообщение*</label>
+                                    <textarea class="el-input__field" name="comment" cols="45" rows="8" required></textarea>
                                 </p>
-                            </div>
-                            <div class="comments__email-name"> 
-                                <p class="el-input comments-name">
-                                    <label class="el-input__label">Имя*</label>
-                                    <input class="el-input__field" type="text" placeholder="" required>
-                                </p>
-                                <p class="el-input comments-email">
-                                    <label class="el-input__label">Email*</label>
-                                    <input class="el-input__field" type="text" placeholder="" required>
-                                </p>
-                            </div>
-                            <p class="el-input comments-textarea">
-                                <label class="el-input__label">Ваше сообщение*</label>
-                                <textarea class="el-input__field" name="comment" cols="45" rows="8" required></textarea>
-                            </p>
-                            <button class="el-form__button">Отправить</button>
-                        </form>
+                                <button class="el-form__button">Отправить</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
