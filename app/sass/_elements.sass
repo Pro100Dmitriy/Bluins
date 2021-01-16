@@ -174,3 +174,62 @@
                font-weight: 500
                &::after
                   content: ''
+
+
+
+// Go to tooop!
+
+.hidden
+   opacity: 0 !important
+   bottom: -40px !important
+
+.go-to-top
+   opacity: 1
+   position: fixed
+   bottom: 60px
+   right: 60px
+   z-index: $header-z-index
+   width: 40px
+   height: 40px
+   border-radius: 100px
+   border: none
+   background: $white
+   box-shadow: 0 3px 10px rgba($dark, 0.2)
+   display: flex
+   align-items: center
+   justify-content: center
+   transition: all 0.5s ease
+   &:hover
+      span
+         &::before
+            transform: translateY(-50%) rotate(0deg)
+         &::after
+            transform: translateY(-50%) rotate(0deg)
+   span
+      width: 20px
+      height: 20px
+      display: block
+      position: relative
+      right: 0
+      &::before
+         content: ''
+         position: absolute
+         top: 50%
+         left: 10%
+         transform: translateY(-50%) rotate(-45deg)
+         width: 50%
+         height: 2px
+         background: $dark
+         border-radius: 3px
+         transition: all 0.3s ease
+      &::after
+         content: ''
+         position: absolute
+         top: 50%
+         left: 45%
+         transform: translateY(-50%) rotate(45deg)
+         width: 50%
+         height: 2px
+         background: $dark
+         border-radius: 3px
+         transition: all 0.3s ease

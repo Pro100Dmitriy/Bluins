@@ -88,14 +88,6 @@ let documentheight;
 
 
 $(document).on('wheel',function(e){
-  //if (typeof window.innerWidth != 'undefined')
-  //{
-  //    viewportwidth = window.innerWidth,
-  //    viewportheight = window.innerHeight
-  //}
-  //console.log(viewportwidth);
-  //console.log( viewportheight );
-  //console.log( $(window).scrollTop() );
 
   if( $(window).scrollTop() >= 500 ){
     $('#header__bottom-cover').addClass('header__bottom-fixed');
@@ -119,6 +111,25 @@ $('#fotter-email').on('blur',function(e){
 });
 
 
+// Go To Top
+
+$('#go-to-top').on('click', function(e){
+  e.preventDefault;
+  console.log('asdf')
+  $('html, body').animate({scrollTop: 0}, 1000);
+  $('#header__bottom-cover').removeClass('header__bottom-fixed');
+  $('#go-to-top').addClass('hidden');
+});
+
+
+$(window).on('wheel', function() {
+  if( $(window).scrollTop() >= 1000 ){
+    $('#go-to-top').removeClass('hidden');
+  }else{
+    $('#go-to-top').addClass('hidden');
+  }
+});
+
 
 //el-form
 let elInput;
@@ -140,40 +151,18 @@ $('#comments-hidden-toggle').on('click', function(){
   $('#comments-toggle').toggleClass('comments-hidden')
 });
 
+// Cart Froms
+$('#cart__item-slide').on('click', function(){
+  $('.delete-item').toggleClass('close');
+  $('#cart__item-forms').toggleClass('item-forms__open');
+});
+
 
 
 // Product grid
 
 let gridName = ['fore-item','five-item','list-item'];
-/*
-$('#grid-fore').on('click',function(e){
-  $('.grid-button').removeClass('grid-button-active');
-  $(this).addClass('grid-button-active');
-  //$('#products__list-container').css('opacity','0');
 
-  let listItem = $('#products__list-container li');
-
-  let i = 0;
-
-  let intOpacity = setInterval(() => {
-    $( listItem[i++] ).css('opacity','0');
-    console.log( '1' );
-    if( i > listItem.length ){ clearInterval(intOpacity) }
-  },10);
-
-
-  $('#products__list-container').removeClass(gridName);  
-  $('#products__list-container').addClass('fore-item');
-
-
-  i2 = 0;
-  let intOpacity2 = setInterval(() => {
-    $( listItem[i2++] ).css('opacity','1');
-    if( i2 > listItem.length ){ clearInterval(intOpacity2) }
-  },10);
-
-});
-*/
 $('#grid-fore').on('click',function(e){
   $('.grid-button').removeClass('grid-button-active');
   $(this).addClass('grid-button-active');

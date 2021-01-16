@@ -1,0 +1,62 @@
+@import '../mixin';
+@import '../vars';
+
+@import '../elements'
+
+
+.like__content__information
+   width: 100%
+   .like__products__list
+      &__item
+         display: flex
+         justify-content: space-between
+         padding: 1.2rem 0
+         border-bottom: 1px solid $blue-light
+         &:last-child
+            border-bottom: none
+         &__img
+            display: flex
+            .close-button
+               width: 2.5rem
+               height: 2.5rem
+               background: none
+               border-radius: 0
+               margin-bottom: 0.73rem
+            .like__products__title
+               .like-title
+                  color: $dark
+                  font-size: 1rem
+                  font-family: 'Jost'
+                  font-weight: 500
+                  margin-bottom: 0.5rem
+               .like-color
+                  color: $dark-light
+                  font-size: 1rem
+                  font-family: 'Jost'
+                  font-weight: 300
+                  span
+                     margin-left: 0.5rem
+            .like__products__img__cover
+               margin-right: 2rem
+               margin-left: 2rem
+               position: relative
+               overflow: hidden
+               width: 100px
+               height: 100px
+               img
+                  width: 100%
+                  @include absolute-align-center
+         &__price
+            text-align: right
+            .like-price
+               color: $dark-light
+               font-size: 1rem
+               font-family: 'Jost'
+               font-weight: 300
+         &__add-to-cart
+            .like-date
+               color: $dark-light
+               font-size: 1rem
+               font-family: 'Jost'
+               font-weight: 300
+               margin-bottom: 0.45rem

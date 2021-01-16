@@ -9,12 +9,28 @@
    width: 100%
    height: 750px
    background: $blue-light
+   position: relative
    &__content
       text-align: center
       margin: 20rem auto
       color: $white
       h1
+         position: relative
+         z-index: 1
          color: $dark-light
          line-height: 200px
       p
          color: $dark-light
+         position: relative
+         z-index: 1
+      .svg-bg
+         position: absolute
+         opacity: 0.33
+      .left-svg
+         top: 105%
+         right: 0%
+         transform: translate(-50%,-50%)
+      .right-svg
+         top: 50%
+         left: 110%
+         transform: translate(-50%,-50%)
