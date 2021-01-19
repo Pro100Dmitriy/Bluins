@@ -43,6 +43,9 @@
                overflow: hidden
                width: 100px
                height: 100px
+               @media screen and ( max-width: 768px )
+                  width: 60px
+                  height: 100px
                img
                   width: 100%
                   @include absolute-align-center
@@ -60,3 +63,9 @@
                font-family: 'Jost'
                font-weight: 300
                margin-bottom: 0.45rem
+            .el-form__button
+               @media screen and ( max-width: 768px )
+                  span
+                     display: none
+                  i
+                     text-transform: uppercase

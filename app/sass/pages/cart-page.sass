@@ -7,9 +7,14 @@
    margin-bottom: 15rem
    &__flex 
       display: flex
+      @media screen and ( max-width: 992px )
+         flex-direction: column
    &__information
       width: calc( 100% - 300px )
       padding: 0 3.66rem
+      @media screen and ( max-width: 992px )
+         width: 100%
+         padding: 0
       &__promocode
          margin-top: 1rem
          width: 363px
@@ -73,6 +78,9 @@
       background: $light
       padding: 2.66rem
       height: 100%
+      @media screen and ( max-width: 992px )
+         margin-top: 5rem
+         width: 100%
       .el-form__button
          width: 100%
          text-align: center

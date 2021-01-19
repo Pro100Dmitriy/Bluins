@@ -51,7 +51,7 @@
          margin-bottom: 2rem
       &__qoute
          border-left: 2px solid $dark
-         width: 500px
+         max-width: 500px
          color: $dark-light
          padding: 1rem 0 1rem 1rem
          i
@@ -70,21 +70,31 @@
    margin-bottom: 10rem
    background: $white
    padding-top: 3rem
+   @media screen and ( max-width: 992px )
+      padding: 3rem 2rem 0
    h2
       color: $dark
       text-align: center
       margin-bottom: 3rem
    &__table
       display: flex
+      @media screen and ( max-width: 576px )
+         flex-direction: column
       p
          color: $dark-light
          margin-bottom: 2rem
       &__first-column
          width: 50%
          padding-right: 1rem
+         @media screen and ( max-width: 576px )
+            width: 100%
+            padding-right: 0
       &__second-column
          width: 50%
          padding-left: 1rem
+         @media screen and ( max-width: 576px )
+            width: 100%
+            padding-left: 0
 
 
 
@@ -92,6 +102,9 @@
    margin-bottom: 4rem
    &__flex
       display: flex
+      @media screen and ( max-width: 768px )
+         flex-direction: column
+         justify-content: center
       &__img-cover
          width: 652px
          height: 367px
@@ -99,11 +112,28 @@
          overflow: hidden
          display: block
          margin-right: 3rem
+         @media screen and ( max-width: 1200px )
+            width: 500px
+         @media screen and ( max-width: 992px )
+            width: 350px
+         @media screen and ( max-width: 768px )
+            width: 100%
+            margin-right: 0
+            margin-bottom: 3rem
          &__img
             @include absolute-align-center
             width: 100%
+            @media screen and ( max-width: 992px )
+               width: auto
+               height: 100%
       &__text
          width: calc(100% - (652px + 3rem) )
+         @media screen and ( max-width: 1200px )
+            width: calc(100% - (500px + 3rem) ) 
+         @media screen and ( max-width: 992px )
+            width: calc(100% - (350px + 3rem) ) 
+         @media screen and ( max-width: 768px )
+            width: 100%
          h2
             color: $dark
             margin-bottom: 3rem
@@ -127,6 +157,8 @@
 .about-question-form
    background: $light
    padding: 6rem 0
+   @media screen and ( max-width: 800px )
+      padding: 6rem 2rem !important
    .el-input
       .el-label-focus
          background: $light
