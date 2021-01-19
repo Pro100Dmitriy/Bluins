@@ -6,8 +6,12 @@
    
    
 .slider
-   height: 1082px
+   height: 980px
    width: 100%
+   @media screen and ( max-width: 992px )
+      height: 900px
+   @media screen and ( max-width: 768px )
+      height: 700px
    &:hover
       .slick-slider
          .slick-prev
@@ -71,18 +75,33 @@
             top: 0 !important
             opacity: 1 !important
       &__item
-         max-height: 1082px
+         max-height: 980px
          position: relative
          overflow: hidden
          &__img
             width: 100%
-            height: 100%
+            @media screen and ( max-width: 1500px )
+               height: 1082px
+            @media screen and ( max-width: 992px )
+               height: 900px
+            @media screen and ( max-width: 768px )
+               height: 700px
          &__content
             position: absolute
             top: 45%
             left: 50%
             transform: translate(-50%,-50%)
             width: 1200px
+            @media screen and ( max-width: 1250px )
+               top: 50%
+               width: 50pc
+            @media screen and ( max-width: 992px )
+               top: 50%
+               width: 40pc
+            @media screen and ( max-width: 768px )
+               text-align: center
+               width: 100%
+               padding: 0 2rem
             .h2-cover
                position: relative
                height: 11rem
@@ -97,9 +116,16 @@
                   transition: all 0.5s ease
                   transition-delay: 0.5s
                   opacity: 0
+                  @media screen and ( max-width: 992px )
+                     white-space: normal
+                     width: 100%
             .description
                padding: 2.8rem 0 0 1.8rem
                max-width: 40.6rem
+               @media screen and ( max-width: 768px )
+                  text-align: center
+                  max-width: 100%
+                  padding: 2.8rem 0 0 0
                .description__text-cover
                   position: relative
                   height: 6rem
@@ -156,6 +182,12 @@
       height: 537px
       overflow: hidden
       background: $blue
+      @media screen and ( max-width: 992px )
+         height: 400px
+      @media screen and ( max-width: 768px )
+         max-width: 100%
+         height: 350px
+         margin-bottom: 2rem
       &:hover
          .fill-button
             background: $light
@@ -165,6 +197,9 @@
          margin: 0 auto
          height: 100%
          transition: all 1.5s ease
+         @media screen and ( max-width: 768px )
+            width: 100%
+            height: auto
       &__text
          width: 80%
          position: absolute
@@ -202,8 +237,13 @@
       flex-direction: row
       width: 100%
       transition: all 0.3s ease
+      @media screen and ( max-width: 768px )
+         flex-wrap: wrap
+         justify-content: center
       &__item
          transition: all 0.3s ease
+         @media screen and ( max-width: 768px )
+            margin-bottom: 2rem
 
 
 
@@ -212,6 +252,15 @@
    .product-cart__top
       width: 270px
       height: 270px
+      @media screen and ( max-width: 1200px )
+         width: 210px
+         height: 210px
+      @media screen and ( max-width: 992px )
+         width: 210px
+         height: 210px
+      @media screen and ( max-width: 768px )
+         width: 360px
+         height: 360px
 
 
 
@@ -240,6 +289,15 @@
       height: 360px
       overflow: hidden
       margin-bottom: 7px
+      @media screen and ( max-width: 1200px )
+         width: 300px
+         height: 300px
+      @media screen and ( max-width: 992px )
+         width: 210px
+         height: 210px
+      @media screen and ( max-width: 768px )
+         width: 360px
+         height: 360px
       .new-icon
          position: absolute
          top: 1rem
@@ -373,6 +431,9 @@
             .stroke-button
                border: 2px solid $dark
                color: $dark
+               white-space: nowrap
+               i
+                  font-style: normal
                &:hover
                   color: $white
                   background: $dark
@@ -399,6 +460,8 @@
          .slick-list
             width: 450px
             margin: 0 auto
+            @media screen and ( max-width: 500px )
+               width: 180px
          .feedback__img__el
             height: 140px
             .img-cover
@@ -470,14 +533,14 @@
          .feedback__text__el
             text-align: center
             .el-name
-               width: 600px
+               max-width: 600px
                margin: 0 auto 1.8rem
                color: $dark
                display: block
             .el-description
                color: $dark-light
                display: block
-               width: 600px
+               max-width: 600px
                margin: 0 auto 3.2rem
 
 
@@ -489,8 +552,12 @@
       justify-content: space-between
       flex-direction: row
       width: 100%
+      @media screen and ( max-width: 992px )
+         flex-wrap: wrap
+         justify-content: center
       &__item
-
+         @media screen and ( max-width: 992px )
+            margin: 1.5rem
 
 .about
    padding: 6rem 0 1rem 0
@@ -501,12 +568,17 @@
          display: block
          position: relative
          overflow: hidden
+         @media screen and ( max-width: 992px )
+            height: 450px
          &__img
             position: absolute
             top: 50%
             left: 50%
             transform: translate(-50%, -50%)
             width: 100%
+            @media screen and ( max-width: 768px )
+               width: auto
+               height: 100%
       &__text
          display: flex
          flex-direction: row
@@ -523,3 +595,19 @@
             display: flex
             align-items: center
             justify-content: center
+            @media screen and ( max-width: 1200px )
+               width: 25%
+               padding: 1rem
+            @media screen and ( max-width: 992px )
+               width: 25%
+               height: 120px
+               p
+                  font-size: 1.15rem
+            @media screen and ( max-width: 768px )
+               width: 45%
+               height: 130px
+               p
+                  font-size: 1.2rem
+         .text-right
+            @media screen and ( max-width: 768px )
+               display: none

@@ -25,6 +25,8 @@
    background: $dark
    color: $white
    transition: all 0.3s ease
+   @media screen and ( max-width: 500px )
+      width: 100%
    &__top
       display: flex
       align-items: center
@@ -200,6 +202,8 @@
    &__left
       .bradcrumbs
          color: $dark-light
+         @media screen and ( max-width: 570px )
+            display: none
          &>a
             color: $dark-light
             transition: all 0.2s ease
@@ -271,21 +275,39 @@
       flex-direction: row
       width: 100%
       flex-wrap: wrap
+      @media screen and ( max-width: 768px )
+         justify-content: center
       .big-products__list__item
          width: calc( (100vw - 12rem) / 4 )
          margin-bottom: 3rem
          margin-right: 2rem
+         @media screen and ( max-width: 992px )
+            width: calc( (100vw - 12rem) / 3 )
+            margin: 1rem
+         @media screen and ( max-width: 768px )
+            width: 360px
+            margin-right: 0rem
          &:nth-child(4)
             margin-right: 0
+            @media screen and ( max-width: 992px )
+               margin-right: 1rem
          &:nth-child(8)
             margin-right: 0
+            @media screen and ( max-width: 992px )
+               margin-right: 1rem
          &:nth-child(12)
             margin-right: 0
+            @media screen and ( max-width: 992px )
+               margin-right: 1rem
          .product-cart
             max-width: 100%
             .product-cart__top
                width: 100%
                height: calc( (100vw - 12rem) / 4 )
+               @media screen and ( max-width: 992px )
+                  height: calc( (100vw - 12rem) / 3 )
+               @media screen and ( max-width: 768px )
+                  height: 360px
             .product-cart__bottom
                &__left
                   .additing-block-information
@@ -297,21 +319,48 @@
       flex-direction: row
       width: 100%
       flex-wrap: wrap
+      @media screen and ( max-width: 768px )
+         justify-content: center
       .big-products__list__item
          width: calc( (100vw - 14rem) / 5 )
          margin-bottom: 3rem
          margin-right: 2rem
+         @media screen and ( max-width: 1200px )
+            width: calc( (100vw - 14rem) / 4 )
+            margin: 1rem
+         @media screen and ( max-width: 992px )
+            width: calc( (100vw - 12rem) / 3 )
+         @media screen and ( max-width: 768px )
+            width: calc( (100vw - 10rem) / 2 )
          &:nth-child(5)
             margin-right: 0
+            @media screen and ( max-width: 1200px )
+               margin: 1rem
+            @media screen and ( max-width: 768px )
+               margin: 1rem
          &:nth-child(10)
             margin-right: 0
+            @media screen and ( max-width: 1200px )
+               margin: 1rem
+            @media screen and ( max-width: 768px )
+               margin: 1rem
          &:nth-child(15)
             margin-right: 0
+            @media screen and ( max-width: 1200px )
+               margin: 1rem
+            @media screen and ( max-width: 768px )
+               margin: 1rem
          .product-cart
             max-width: 100%
             .product-cart__top
                width: 100%
                height: calc( (100vw - 14rem) / 5 )
+               @media screen and ( max-width: 1200px )
+                  height: calc( (100vw - 14rem) / 4 )
+               @media screen and ( max-width: 992px )
+                  height: calc( (100vw - 12rem) / 3 )
+               @media screen and ( max-width: 768px )
+                  height: calc( (100vw - 10rem) / 2 )
             .product-cart__bottom
                &__left
                   .additing-block-information
@@ -327,6 +376,9 @@
          width: calc( (100vw - 8rem) / 2 )
          margin-bottom: 3rem
          margin-right: 2rem
+         @media screen and ( max-width: 768px )
+            width: calc( (100vw - 8rem) )
+            margin-right: 0rem
          &:nth-child(2)
             margin-right: 0
          &:nth-child(4)
@@ -345,8 +397,36 @@
             &__top
                width: 400px
                height: 400px
+               @media screen and ( max-width: 1500px )
+                  height: 300px
+               @media screen and ( max-width: 1000px )
+                  .product-img
+                     height: 100%
+                     width: auto
+               @media screen and ( max-width: 860px )
+                  height: 180px
+                  width: 50%
+                  .product-img
+                     height: auto
+                     width: 100%
             &__bottom
                padding: 2.53rem 2.2rem
+               @media screen and ( max-width: 1500px )
+                  padding: 1.53rem 1.2rem
+                  .block-description
+                     margin: 1rem 0
+               @media screen and ( max-width: 860px )
+                  padding: 0 2.2rem
+                  width: 50%
+                  .product-color
+                     margin-bottom: 1rem
+                  .block-description
+                     display: none
+                  .stroke-button
+                     span
+                        display: none
+                     i
+                        text-transform: uppercase
                &__left
                   &__links
                      margin: 1rem 0

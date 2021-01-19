@@ -5,10 +5,14 @@
 
 html
     font-size: 15px
+    @media screen and ( max-width: 1200px )
+        font-size: 13px
+
 
 @import 'font_style';
 @import 'reset_css';
 @import 'elements';
+
 
 .big-container
     max-width: 100%
@@ -46,6 +50,8 @@ html
     display: flex
     flex-direction: column
     justify-content: space-between
+    @media screen and ( max-width: 468px )
+        width: 100%
     &__top
         background: $black
         display: flex
@@ -243,6 +249,8 @@ html
         position: relative
         max-width: 23rem
         padding-right: 3rem
+        @media screen and ( max-width: 770px )
+            max-width: 15rem
         &::after
             content: ''
             position: absolute
@@ -305,6 +313,12 @@ html
                     width: calc(1110px - 345px)
                     flex-wrap: wrap
                     visibility: hidden
+                    @media screen and ( max-width: 992px )
+                        width: calc(720px - 299px)
+                    @media screen and ( max-width: 575px )
+                        width: calc(100vw - 195px)
+                        height: 100vh
+                        overflow: scroll
                     &__item
                         margin-right: 10rem
                         margin-bottom: 8rem
@@ -312,6 +326,8 @@ html
                         transition: all 0.3s ease
                         opacity: 0
                         transition-delay: 0.1s
+                        @media screen and ( max-width: 992px )
+                            margin-right: 8rem
                         &:nth-child(1) 
                             transform: translate(0, 25px)
                         &:nth-child(2) 
@@ -319,6 +335,10 @@ html
                         &:nth-child(3) 
                             transform: translate(0, 75px)
                             margin-right: 2rem
+                            @media screen and ( max-width: 1200px )
+                                margin-right: 10rem
+                            @media screen and ( max-width: 992px )
+                                margin-right: 8rem
                         &:nth-child(4) 
                             transform: translate(0, 100px)
                         &>a
@@ -379,6 +399,8 @@ html
                             &:last-child
                                 margin-right: 0rem
                 .site-menu
+                    @media screen and ( max-width: 900px )
+                        display: none
                     &__links
                         display: flex
                         flex-direction: row
@@ -401,6 +423,13 @@ html
                         margin-right: 0.8rem
                 .phone
                     margin-right: 6.3rem
+                    @media screen and ( max-width: 940px )
+                        margin-right: 3rem
+                    @media screen and ( max-width: 570px )
+                        margin-right: 0rem
+                .time_work
+                    @media screen and ( max-width: 570px )
+                        display: none
     .white-bg
         background: $white !important
         border-bottom: 1px solid rgba($line_gray, 1)
@@ -456,9 +485,28 @@ html
         border-bottom: 1px solid rgba($line_gray, 0)
         transition: all 0.3s ease
         transition-delay: 0.1s
+        @media screen and ( max-width: 700px )
+            background: $white
+            border-bottom: 1px solid rgba($line_gray, 1)
+            .main-menu__item
+                &>a
+                    &::after
+                        background: $dark
+                .sub-nav__item__pages
+                    a
+                        &::after
+                            background: $dark
+            ul
+                a
+                    color: $dark !important
+            svg
+                path
+                    fill: $dark !important
         &__content
             display: flex
             justify-content: space-between
+            @media screen and ( max-width: 1020px )
+                padding: 1rem 0
             button
                 background: none
                 border: none 
@@ -477,11 +525,15 @@ html
                 align-items: center
                 .burger
                     margin-right: 2.5rem
+                    @media screen and ( max-width: 400px )
+                        margin-right: 0
                     .burger__button
                         svg
                             path
                                 transition: all 0.3s ease !important
                 .main-menu
+                    @media screen and ( max-width: 1020px )
+                        display: none
                     &__links
                         .main-menu__item
                             &:hover
@@ -560,6 +612,8 @@ html
                 top: 50%
                 left: 50%
                 transform: translate(-50%,-50%)
+                @media screen and ( max-width: 700px )
+                    display: none
                 svg
                     path
                         transition: all 0.3s ease !important
@@ -679,10 +733,16 @@ html
 .footer__links
     &__top
         padding: 3.8rem 0
+        @media screen and ( max-width: 768px )
+            padding: 3.8rem 0 0
         .footer-menu
+            @media screen and ( max-width: 768px )
+                margin-bottom: 5rem
             &__list
                 &__item
                     margin-bottom: 0.7rem
+                    @media screen and ( max-width: 576px )
+                        text-align: center
                     &:first-child
                         margin-bottom: 1.8rem
                     &:last-child
@@ -709,6 +769,8 @@ html
                             transition: all 0.3s ease
                     .sub-menu-social
                         display: flex
+                        @media screen and ( max-width: 576px )
+                            justify-content: center
                         &__item
                             margin-right: 0.45rem
                     .list-description
@@ -719,6 +781,8 @@ html
             &__list
                 display: flex
                 flex-direction: row
+                @media screen and ( max-width: 768px )
+                    justify-content: center
                 &__item
                     margin-right: 2.4rem
                     &>a
@@ -729,3 +793,11 @@ html
                             color: $blue
         .footer-text-bottom
             text-align: right
+            @media screen and ( max-width: 768px )
+                text-align: center
+
+
+
+
+//Media 
+@import 'responsive.sass';

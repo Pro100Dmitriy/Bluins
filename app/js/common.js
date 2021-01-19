@@ -64,14 +64,14 @@ $('.main-menu__item').on('mouseover',function(e){
   if(this.childNodes[3]){
     $('.header__bottom').addClass('white-bg')
   }else{
-    console.log('bad');
+    //console.log('bad');
   }
 })
 $('.main-menu__item').on('mouseout',function(e){
   if(this.childNodes[3]){
     $('.header__bottom').removeClass('white-bg')
   }else{
-    console.log('bad');
+    //console.log('bad');
   }
 })
 
@@ -193,7 +193,15 @@ $('.slick-slider').slick({
    fade: true,
    cssEase: 'linear',
    nextArrow: '<button type="button" class="slick-next"><img src="img/Icon/Dark/next.svg" alt="Next"></button>',
-   prevArrow: '<button type="button" class="slick-prev"><img src="img/Icon/Dark/prev.svg" alt="Prev"></button>'
+   prevArrow: '<button type="button" class="slick-prev"><img src="img/Icon/Dark/prev.svg" alt="Prev"></button>',
+   responsive: [{
+
+    breakpoint: 768,
+    settings: {
+      arrows: false
+    }
+
+  }]
  });
 
 
@@ -206,7 +214,15 @@ $('#feedback__slider__img').slick({
   dots: false,
   fade: false,
   draggable: false,
-  asNavFor: '#feedback__slider__text'
+  asNavFor: '#feedback__slider__text',
+  responsive: [{
+
+    breakpoint: 500,
+    settings: {
+      slidesToShow: 1
+    }
+
+  }]
 });
 $('#feedback__slider__text').slick({
   slidesToShow: 1,
@@ -220,7 +236,15 @@ $('#feedback__slider__text').slick({
   draggable: false,
   focusOnSelect: true,
   nextArrow: '<button type="button" class="slick-next"><img src="img/Icon/Dark/next.svg" alt="Next"></button>',
-  prevArrow: '<button type="button" class="slick-prev"><img src="img/Icon/Dark/prev.svg" alt="Prev"></button>'
+  prevArrow: '<button type="button" class="slick-prev"><img src="img/Icon/Dark/prev.svg" alt="Prev"></button>',
+  responsive: [{
+
+      breakpoint: 768,
+      settings: {
+        arrows: false
+      }
+
+    }]
 });
 
 

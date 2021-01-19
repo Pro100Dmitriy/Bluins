@@ -19,7 +19,7 @@
          fill: $dark !important
 
 .small-container
-   width: 780px
+   max-width: 780px
    margin: 0 auto
 
 .information-product
@@ -216,7 +216,7 @@
    margin-bottom: 10rem
    &__text
       margin: 0 auto
-      width: 780px
+      max-width: 780px
       p
          color: $dark-light
          margin-bottom: 2rem
@@ -270,14 +270,28 @@
             &__text
                padding-bottom: 2rem
                border-bottom: 1px solid $blue-light
+               width: calc( 100% - 80px - 1.5rem )
                &__info
                   display: flex
                   justify-content: space-between
+                  .comment-rating
+                     &__stars
+                        a
+                           &:last-child
+                              img
+                                 @media screen and ( max-width: 768px )
+                                    margin-right: -1rem
+                           img
+                              @media screen and ( max-width: 768px )
+                                 width: 28px
+                                 height: 28px
+                                 margin-right: -1rem
                   .comment__name-date
                      &__name
                         color: $dark
                         line-height: 1em
                         margin-bottom: 0.5rem
+                        white-space: nowrap
                      &__date
                         line-height: 1em
                         color: $dark-light
