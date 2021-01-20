@@ -87,7 +87,7 @@ let viewportheight;
 let documentheight;
 
 
-$(document).on('wheel',function(e){
+$(document).on('wheel touchmove',function(e){
 
   if( $(window).scrollTop() >= 500 ){
     $('#header__bottom-cover').addClass('header__bottom-fixed');
@@ -122,7 +122,7 @@ $('#go-to-top').on('click', function(e){
 });
 
 
-$(window).on('wheel', function() {
+$(window).on('wheel touchmove', function() {
   if( $(window).scrollTop() >= 1000 ){
     $('#go-to-top').removeClass('hidden');
   }else{
@@ -256,5 +256,14 @@ $('#information-product__sliders__slick').slick({
   fade: true,
   cssEase: 'linear',
   nextArrow: '<button type="button" class="slick-next"><img src="img/Icon/Dark/next.svg" alt="Next"></button>',
-  prevArrow: '<button type="button" class="slick-prev"><img src="img/Icon/Dark/prev.svg" alt="Prev"></button>'
+  prevArrow: '<button type="button" class="slick-prev"><img src="img/Icon/Dark/prev.svg" alt="Prev"></button>',
+  responsive: [{
+
+    breakpoint: 1100,
+    settings: {
+      arrows: false,
+      dots: false
+    }
+
+  }]
 });

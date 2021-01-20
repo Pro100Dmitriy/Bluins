@@ -12,16 +12,24 @@
          justify-content: space-between
          padding: 1.2rem 0
          border-bottom: 1px solid $blue-light
+         @media screen and ( max-width: 768px )
+            flex-direction: column
+            text-align: center
          &:last-child
             border-bottom: none
          &__img
             display: flex
+            @media screen and ( max-width: 768px )
+               flex-direction: column
+               justify-content: center
             .close-button
                width: 2.5rem
                height: 2.5rem
                background: none
                border-radius: 0
                margin-bottom: 0.73rem
+               @media screen and ( max-width: 768px )
+                  display: none
             .like__products__title
                .like-title
                   color: $dark
@@ -44,13 +52,17 @@
                width: 100px
                height: 100px
                @media screen and ( max-width: 768px )
-                  width: 60px
-                  height: 100px
+                  width: 150px
+                  height: 150px
+                  margin: 0 auto 1rem
                img
                   width: 100%
                   @include absolute-align-center
          &__price
             text-align: right
+            @media screen and ( max-width: 768px )
+               text-align: center
+               margin: 1rem 0
             .like-price
                color: $dark-light
                font-size: 1rem
@@ -63,8 +75,15 @@
                font-family: 'Jost'
                font-weight: 300
                margin-bottom: 0.45rem
+            .delete-but
+               width: 100%
+               display: none
+               @media screen and ( max-width: 768px )
+                  display: block
             .el-form__button
                @media screen and ( max-width: 768px )
+                  width: 100%
+                  margin-bottom: 1rem
                   span
                      display: none
                   i
