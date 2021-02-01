@@ -251,6 +251,9 @@ html
         padding-right: 3rem
         @media screen and ( max-width: 770px )
             max-width: 15rem
+        @media screen and ( max-width: 370px )
+            max-width: 13rem
+            padding-right: 2rem
         &::after
             content: ''
             position: absolute
@@ -259,6 +262,8 @@ html
             width: 1px
             height: 300%
             background: linear-gradient(0deg, transparent, $dark-light)
+            @media screen and ( max-width: 370px )
+                left: 91%
         .fullscreen__nav__list
             .curent-hover
                 .fullscreen__sub-menu__item
@@ -319,6 +324,8 @@ html
                         width: calc(100vw - 195px)
                         height: 100vh
                         overflow: scroll
+                    @media screen and ( max-width: 370px )
+                        left: calc(100% + 0.5rem)
                     &__item
                         margin-right: 10rem
                         margin-bottom: 8rem
@@ -367,7 +374,44 @@ html
                                         height: 2px
                                         background: $dark
                                         transition: all 0.3s ease
-
+    &__additional
+        max-width: 23rem
+        padding-right: 3rem
+        position: absolute
+        bottom: 2rem
+        display: none
+        @media screen and ( max-width: 770px )
+            max-width: 15rem
+        @media screen and ( max-width: 370px )
+            display: block
+            width: 13rem
+            padding-right: 2rem
+        &__user-page
+            &__links
+                width: 100%
+                display: flex
+                flex-direction: column
+                align-items: center
+                li
+                    margin-bottom: 1.3rem
+                    button
+                        background: none
+                        padding: none
+                        width: 45px
+                        height: 45px
+                        border: none
+                        outline: none
+                        padding: 0
+                    a
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        width: 45px
+                        height: 45px 
+                        color: $dark-light
+                    svg
+                        path
+                            fill: $dark !important
 
 
 
@@ -394,8 +438,12 @@ html
                         display: flex
                         flex-direction: row
                         margin-right: 1.3rem
+                        @media screen and ( max-width: 360px )
+                            margin-right: 0
                         li
                             margin-right: 0.5rem
+                            @media screen and ( max-width: 360px )
+                                margin-right: 0
                             &:last-child
                                 margin-right: 0rem
                 .site-menu
@@ -421,12 +469,17 @@ html
                     align-items: center
                     img
                         margin-right: 0.8rem
+                        @media screen and ( max-width: 320px )
+                            margin-right: 0
                 .phone
                     margin-right: 6.3rem
                     @media screen and ( max-width: 940px )
                         margin-right: 3rem
                     @media screen and ( max-width: 570px )
                         margin-right: 0rem
+                    img
+                        @media screen and ( max-width: 310px )
+                            display: none
                 .time_work
                     @media screen and ( max-width: 570px )
                         display: none
@@ -623,8 +676,18 @@ html
                 display: flex
                 .user-page
                     &__links
+                        .user-page__links__user-profile
+                            @media screen and ( max-width: 380px )
+                                display: none
+                        .user-page__links__like-icon
+                            @media screen and ( max-width: 380px )
+                                display: none
                         li 
                             margin-left: 1.3rem
+                            @media screen and ( max-width: 380px )
+                                margin-left: 0.7rem
+                            button
+                                padding: 0
                             svg
                                 path
                                     transition: all 0.3s ease !important
@@ -683,10 +746,14 @@ html
             display: flex
             flex-direction: row
             align-items: center
+            @media screen and ( max-width: 450px )
+                flex-direction: column
             &__input-item
                 position: relative
                 margin-right: 1rem
                 width: 100%
+                @media screen and ( max-width: 450px )
+                    margin-right: 0
                 &__label
                     position: absolute
                     top: 50%
@@ -727,6 +794,9 @@ html
                 border: none
                 border-radius: 0
                 transition: all 0.3s ease
+                @media screen and ( max-width: 450px )
+                    width: 100%
+                    margin-top: 2rem
                 &:hover
                     background: $blue
 
@@ -783,8 +853,18 @@ html
                 flex-direction: row
                 @media screen and ( max-width: 768px )
                     justify-content: center
+                @media screen and ( max-width: 350px )
+                    flex-direction: column
                 &__item
                     margin-right: 2.4rem
+                    @media screen and ( max-width: 768px )
+                        margin-right: 1.2rem
+                        margin-left: 1.2rem
+                    @media screen and ( max-width: 350px )
+                        text-align: center
+                        margin-right: 0rem
+                        margin-left: 0rem
+                        margin-bottom: 1rem
                     &>a
                         text-decoration: none
                         color: $dark
@@ -796,8 +876,3 @@ html
             @media screen and ( max-width: 768px )
                 text-align: center
 
-
-
-
-//Media 
-@import 'responsive.sass';

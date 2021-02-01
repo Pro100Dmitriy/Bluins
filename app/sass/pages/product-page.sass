@@ -175,9 +175,13 @@
          display: flex
          align-items: center
          justify-content: center
+         @media screen and ( max-width: 420px )
+            flex-direction: column
          &__item
             margin-top: 1.6rem
             padding: 0 1.26rem
+            @media screen and ( max-width: 420px )
+               margin-top: 1rem
             &>a
                display: inline-block
                color: $white
@@ -219,8 +223,13 @@
             display: inline-flex
             border-right: 2px solid $dark
             padding: 0 0.7rem
+            &:nth-child(2)         
+               @media screen and ( max-width: 430px )
+                  border-right: none
             &:last-child
                border-right: none
+               @media screen and ( max-width: 430px )
+                  display: none
             button
                border: none
                background: none
@@ -252,6 +261,8 @@
                width: 33px
                height: 33px
                margin: 0 0.3rem 0 0
+               @media screen and ( max-width: 430px )
+                  display: 
                svg
                   position: absolute
                   top: 0
@@ -308,6 +319,8 @@
                   height: calc( (100vw - 12rem) / 3 )
                @media screen and ( max-width: 768px )
                   height: 360px
+               @media screen and ( max-width: 380px )
+                  height: 250px
             .product-cart__bottom
                &__left
                   .additing-block-information
@@ -462,6 +475,8 @@
       flex-direction: row
       .active-page
          background: $light
+         @media screen and ( max-width: 450px )
+            display: flex
       &__item
          width: 48px
          height: 48px
@@ -472,6 +487,8 @@
          border: 2px solid $light
          margin-right: 1rem
          transition: all 0.3s ease 
+         @media screen and ( max-width: 450px )
+            display: none
          &:last-child
             margin-right: 0
          &:hover
